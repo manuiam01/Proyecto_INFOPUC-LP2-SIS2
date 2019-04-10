@@ -10,22 +10,31 @@ package pe.edu.pucp.all.model.beam;
  * @author alulab14
  */
 public class User {
+    private String username;
+    private String password;
+    private int access_role;
 
-    public int getID() {
-        return ID;
+    public String getUsername() {
+        return username;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getRole() {
-        return Role;
+    public String getPassword() {
+        return password;
     }
 
-    public void setRole(String Role) {
-        this.Role = Role;
+    public void setPassword(String password) {
+        this.password = password;
     }
-    private int ID;
-    private String Role;
+
+    public int getAccess_role() {
+        return access_role;
+    }
+
+    public void setAccess_role(int access_role) {
+        this.access_role = access_role;
+    }
 }
