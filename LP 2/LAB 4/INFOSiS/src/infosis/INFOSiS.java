@@ -15,7 +15,8 @@ public class INFOSiS {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        System.out.println("No hemos hecho nada UwUr");
+        int a=2+2;
     }
     
 }
