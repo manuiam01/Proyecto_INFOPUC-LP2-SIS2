@@ -24,4 +24,8 @@ public class INFOSiS {
         System.out.println("AEA");
     }
     
+    public void unir(){
+        //Prueba de gitHub
+    }
+    
 }
