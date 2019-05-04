@@ -15,7 +15,8 @@ public class INFOSiS {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("No hemos hecho nada aún UwUr");
+        System.out.println("Jajajajajaj lol xd");
+        //xd xd xd xd 
     }
     
 }
