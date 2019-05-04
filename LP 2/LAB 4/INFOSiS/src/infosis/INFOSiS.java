@@ -20,5 +20,8 @@ public class INFOSiS {
         System.out.println("No hemos hecho nada UwUr");
         int a=2+2;
     }
+    public void aea(){
+        System.out.println("AEA");
+    }
     
 }
