@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="State.cs" />
     <Compile Include="frmCourseHistoryManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,18 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStudentConsult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentConsult.Designer.cs">
+      <DependentUpon>frmStudentConsult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentManager.Designer.cs">
+      <DependentUpon>frmStudentManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCourseHistoryManager.resx">
@@ -74,6 +87,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentConsult.resx">
+      <DependentUpon>frmStudentConsult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentManager.resx">
+      <DependentUpon>frmStudentManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

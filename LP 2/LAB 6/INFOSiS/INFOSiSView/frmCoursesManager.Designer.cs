@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblName = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.lblRequisite = new System.Windows.Forms.Label();
@@ -42,9 +45,6 @@
             this.btnModify = new System.Windows.Forms.Button();
             this.btnAddSyllabus = new System.Windows.Forms.Button();
             this.btnAddRequisite = new System.Windows.Forms.Button();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCourseType = new System.Windows.Forms.Label();
             this.cmbCourseType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -57,10 +57,30 @@
             this.Name,
             this.Id,
             this.Description});
-            this.dataGridView.Location = new System.Drawing.Point(67, 239);
+            this.dataGridView.Location = new System.Drawing.Point(72, 239);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(628, 222);
             this.dataGridView.TabIndex = 0;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Nombre";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            this.Name.Width = 200;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Código";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Descripción";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Width = 300;
             // 
             // lblName
             // 
@@ -174,26 +194,6 @@
             this.btnAddRequisite.Text = "Agregar Requisito";
             this.btnAddRequisite.UseVisualStyleBackColor = true;
             // 
-            // Name
-            // 
-            this.Name.HeaderText = "Nombre";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            this.Name.Width = 200;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Código";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Descripción";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            this.Description.Width = 300;
-            // 
             // lblCourseType
             // 
             this.lblCourseType.AutoSize = true;
@@ -232,7 +232,7 @@
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.dataGridView);
-            this.Name = "frmCoursesManager";
+            //this.Name = "frmCoursesManager";
             this.Text = "Gestión de Cursos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
