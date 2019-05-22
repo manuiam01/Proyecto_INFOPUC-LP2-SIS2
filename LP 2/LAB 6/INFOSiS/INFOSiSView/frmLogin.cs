@@ -16,5 +16,24 @@ namespace INFOSiSView
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            string user = txtUsername.Text;
+            if (user == "admin"){
+                //Abrir mdiadmin
+            }
+            else if (user == "coord")
+            {
+                //Abrir mdiCoord
+            }
+            else
+            {
+                mdiUser mdiuser = new mdiUser();
+                mdiuser.ShowDialog();
+            }
+            this.Close();
+        }
     }
 }
