@@ -16,7 +16,7 @@ namespace INFOSiSView
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInternReport());
+            Application.Run(new frmLogin());
         }
     }
 }
