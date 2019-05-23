@@ -47,18 +47,20 @@
             this.rbMan = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.lbIntereses = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtDocument = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.rbDni = new System.Windows.Forms.RadioButton();
             this.rbForeignCard = new System.Windows.Forms.RadioButton();
             this.rbPassport = new System.Windows.Forms.RadioButton();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,7 +172,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(441, 67);
+            this.checkBox1.Location = new System.Drawing.Point(429, 67);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 13;
@@ -179,11 +181,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(462, 67);
+            this.label8.Location = new System.Drawing.Point(450, 68);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 13);
+            this.label8.Size = new System.Drawing.Size(69, 13);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Interesado?";
+            this.label8.Text = "¿Interesado?";
             // 
             // rbWoman
             // 
@@ -226,25 +228,25 @@
             this.lbIntereses.Size = new System.Drawing.Size(255, 69);
             this.lbIntereses.TabIndex = 18;
             // 
-            // button1
+            // btnNew
             // 
-            this.button1.Location = new System.Drawing.Point(429, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 26);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnNew.Location = new System.Drawing.Point(429, 98);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(96, 26);
+            this.btnNew.TabIndex = 19;
+            this.btnNew.Text = "Nuevo";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnModify
             // 
-            this.button2.Location = new System.Drawing.Point(429, 146);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 26);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnModify.Location = new System.Drawing.Point(429, 130);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(96, 26);
+            this.btnModify.TabIndex = 20;
+            this.btnModify.Text = "Modificar";
+            this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.button2_Click);
             // 
             // label10
             // 
@@ -305,15 +307,15 @@
             this.rbPassport.Text = "Pasaporte";
             this.rbPassport.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnSearch
             // 
-            this.button3.Location = new System.Drawing.Point(429, 193);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 26);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnSearch.Location = new System.Drawing.Point(429, 162);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(96, 26);
+            this.btnSearch.TabIndex = 27;
+            this.btnSearch.Text = "Buscar";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -347,20 +349,40 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(429, 194);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(96, 26);
+            this.btnSave.TabIndex = 31;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(429, 226);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(96, 26);
+            this.btnCancel.TabIndex = 32;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
             // frmInterestedManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 479);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtDocument);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnModify);
+            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.lbIntereses);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.rbMan);
@@ -381,7 +403,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmInterestedManager";
-            this.Text = "frmInterestedManager";
+            this.Text = "Gestión de Interesados";
             this.Load += new System.EventHandler(this.frmInterestedManager_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -411,17 +433,19 @@
         private System.Windows.Forms.RadioButton rbMan;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ListBox lbIntereses;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDocument;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.RadioButton rbDni;
         private System.Windows.Forms.RadioButton rbForeignCard;
         private System.Windows.Forms.RadioButton rbPassport;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

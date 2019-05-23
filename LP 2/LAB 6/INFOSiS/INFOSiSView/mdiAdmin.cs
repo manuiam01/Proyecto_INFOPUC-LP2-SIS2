@@ -18,6 +18,10 @@ namespace INFOSiSView
         private frmStudentConsult frmstudentconsult;
         private frmStudentManager frmstudent;
         private frmInterestedMailing frminterestedmail;
+        private frmInterestedManager frminterested;
+        private frmPasswordManager frmpw;
+        private FrmWeekAvailability frmweekavailability;
+        private frmRHManagerEmployee frminterns;
         public mdiAdmin()
         {
             InitializeComponent();
@@ -31,6 +35,11 @@ namespace INFOSiSView
             frmprofessor = null;
             frmstudentconsult = null;
             frmstudent = null;
+            frminterested = null;
+            frminterestedmail = null;
+            frmpw = null;
+            frmweekavailability = null;
+            frminterns = null;
             cambiarEstado(State.New);
         }
 
@@ -43,6 +52,7 @@ namespace INFOSiSView
                 frmcourse.MdiParent=this;
                 cambiarEstado(State.Modify);
             }
+            frmcourse.enable_Report(false);
             frmcourse.Visible = true;
         }
 
@@ -120,7 +130,14 @@ namespace INFOSiSView
 
         private void gestiónDeInteresadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            if(frminterested == null)
+            {
+                frminterested = new frmInterestedManager();
+                frminterested.FormClosing += fManage_Closingfrm;
+                frminterested.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
+            frminterested.Visible = true;
         }
 
         private void gestiónDeProfesoresToolStripMenuItem_Click(object sender, EventArgs e)
@@ -132,22 +149,44 @@ namespace INFOSiSView
                 frmprofessor.MdiParent = this;
                 cambiarEstado(State.Modify);
             }
+            frmprofessor.enable_Report(false);
             frmprofessor.Visible = true;
         }
 
         private void disponibilidadSemanalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if(frmweekavailability == null)
+            {
+                frmweekavailability = new FrmWeekAvailability();
+                frmweekavailability.FormClosing += fManage_Closingfrm;
+                frmweekavailability.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
+            frmweekavailability.Visible = true;
         }
 
         private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if(frmpw == null)
+            {
+                frmpw = new frmPasswordManager();
+                frmpw.FormClosing += fManage_Closingfrm;
+                frmpw.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
+            frmpw.Visible = true;
         }
 
         private void gestiónDePracticantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (frminterns == null)
+            {
+                frminterns = new frmRHManagerEmployee();
+                frminterns.FormClosing += fManage_Closingfrm;
+                frminterns.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
+            frminterns.Visible = true;
         }
     }
 }

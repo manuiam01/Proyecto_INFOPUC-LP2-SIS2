@@ -18,6 +18,7 @@ namespace INFOSiSView
         {
            
             InitializeComponent();
+//<<<<<<< HEAD
             ComponentsState(State.Initial);
             CleanComponents();
         }
@@ -39,6 +40,7 @@ namespace INFOSiSView
                     btnSave.Enabled = false;
                     btnDisable.Enabled = true;
                     btnCancel.Enabled = false;
+                    
                     break;
                 case State.New:
                     txtName.Enabled = true;
@@ -53,6 +55,7 @@ namespace INFOSiSView
                     btnSave.Enabled = true;
                     btnDisable.Enabled = false;
                     btnCancel.Enabled = true;
+                    
                     break;
                 case State.Modify:
                     txtName.Enabled = true;
@@ -67,6 +70,7 @@ namespace INFOSiSView
                     btnSave.Enabled = true;
                     btnDisable.Enabled = false;
                     btnCancel.Enabled = true;
+                    
                     break;
                
                 case State.Search:
@@ -82,6 +86,7 @@ namespace INFOSiSView
                     btnSave.Enabled = false;
                     btnDisable.Enabled = true;
                     btnCancel.Enabled = true;
+                    
                     break;
             }
 
@@ -131,6 +136,28 @@ namespace INFOSiSView
         {
             addreq = new frmAddRequisites();    
             addreq.ShowDialog();
+
+            //dgvCourses.Rows.Add("SQL","101","Curso sobre BD");
+            //dgvCourses.Rows.Add("Excel Básico", "102", "Curso sobre excel básico");
+        }
+
+        public void enable_Report(bool flag)
+        {
+            btnReport.Enabled = flag;
+        }
+
+        private void BtnReport_Click(object sender, EventArgs e)
+        {
+            if (dgvCourses.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Seleccione un curso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                frmCourseReport courseReport = new frmCourseReport();
+                courseReport.ShowDialog();
+            }
+
         }
     }
   

@@ -20,6 +20,7 @@ namespace INFOSiSView
         private frmInterestedMailing frminterestedmail;
         private frmInterestedManager frminterested;
         private frmPasswordManager frmpw;
+        private FrmWeekAvailability frmweekavailability;
         public mdiUser()
         {
             InitializeComponent();
@@ -33,6 +34,10 @@ namespace INFOSiSView
             frmprofessor = null;
             frmstudentconsult = null;
             frmstudent = null;
+            frmweekavailability = null;
+            frminterestedmail = null;
+            frminterested = null;
+            frmpw = null;
             cambiarEstado(State.New);
         }
 
@@ -45,6 +50,7 @@ namespace INFOSiSView
                 frmcourse.MdiParent=this;
                 cambiarEstado(State.Modify);
             }
+            frmcourse.enable_Report(false);
             frmcourse.Visible = true;
         }
 
@@ -143,11 +149,20 @@ namespace INFOSiSView
                 frmprofessor.MdiParent = this;
                 cambiarEstado(State.Modify);
             }
+            frmprofessor.enable_Report(false);
             frmprofessor.Visible = true;
         }
 
         private void disponibilidadSemanalToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if(frmweekavailability == null)
+            {
+                frmweekavailability = new FrmWeekAvailability();
+                frmweekavailability.FormClosing += fManage_Closingfrm;
+                frmweekavailability.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
+            frmweekavailability.Visible = true;
 
         }
 
@@ -161,7 +176,6 @@ namespace INFOSiSView
                 cambiarEstado(State.Modify);
             }
             frmpw.Visible = true;
-
-        }
+        }  
     }
 }

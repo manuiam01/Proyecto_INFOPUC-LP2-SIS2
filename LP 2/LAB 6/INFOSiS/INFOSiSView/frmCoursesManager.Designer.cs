@@ -31,7 +31,10 @@ namespace INFOSiSView
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgv = new System.Windows.Forms.DataGridView();
+            this.dgvCourses = new System.Windows.Forms.DataGridView();
+            this.NameCourse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblName = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.lblRequisite = new System.Windows.Forms.Label();
@@ -49,23 +52,41 @@ namespace INFOSiSView
             this.cmbCourseType = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.CourseName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            this.btnReport = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgv
+            // dgvCourses
             // 
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CourseName,
+            this.dgvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NameCourse,
             this.Id,
             this.Description});
-            this.dgv.Location = new System.Drawing.Point(72, 239);
-            this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(628, 222);
-            this.dgv.TabIndex = 0;
+            this.dgvCourses.Location = new System.Drawing.Point(72, 239);
+            this.dgvCourses.Name = "dgvCourses";
+            this.dgvCourses.Size = new System.Drawing.Size(628, 222);
+            this.dgvCourses.TabIndex = 0;
+            // 
+            // NameCourse
+            // 
+            this.NameCourse.HeaderText = "Nombre";
+            this.NameCourse.Name = "NameCourse";
+            this.NameCourse.ReadOnly = true;
+            this.NameCourse.Width = 200;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Código";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Descripción";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Width = 300;
             // 
             // lblName
             // 
@@ -136,9 +157,9 @@ namespace INFOSiSView
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(610, 20);
+            this.btnNew.Location = new System.Drawing.Point(591, 20);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(85, 20);
+            this.btnNew.Size = new System.Drawing.Size(104, 20);
             this.btnNew.TabIndex = 9;
             this.btnNew.Text = "Nuevo";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -146,9 +167,9 @@ namespace INFOSiSView
             // 
             // btnDisable
             // 
-            this.btnDisable.Location = new System.Drawing.Point(610, 98);
+            this.btnDisable.Location = new System.Drawing.Point(591, 98);
             this.btnDisable.Name = "btnDisable";
-            this.btnDisable.Size = new System.Drawing.Size(85, 20);
+            this.btnDisable.Size = new System.Drawing.Size(104, 20);
             this.btnDisable.TabIndex = 10;
             this.btnDisable.Text = "Deshabilitar";
             this.btnDisable.UseVisualStyleBackColor = true;
@@ -156,9 +177,9 @@ namespace INFOSiSView
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(610, 46);
+            this.btnModify.Location = new System.Drawing.Point(591, 46);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(85, 20);
+            this.btnModify.Size = new System.Drawing.Size(104, 20);
             this.btnModify.TabIndex = 11;
             this.btnModify.Text = "Modificar";
             this.btnModify.UseVisualStyleBackColor = true;
@@ -200,9 +221,9 @@ namespace INFOSiSView
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(610, 72);
+            this.btnSave.Location = new System.Drawing.Point(591, 72);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(85, 20);
+            this.btnSave.Size = new System.Drawing.Size(104, 20);
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -210,33 +231,23 @@ namespace INFOSiSView
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(610, 124);
+            this.btnCancel.Location = new System.Drawing.Point(591, 124);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(85, 20);
+            this.btnCancel.Size = new System.Drawing.Size(104, 20);
             this.btnCancel.TabIndex = 18;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // CourseName
+            // btnReport
             // 
-            this.CourseName.HeaderText = "Nombre";
-            this.CourseName.Name = "CourseName";
-            this.CourseName.ReadOnly = true;
-            this.CourseName.Width = 200;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Código";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Descripción";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            this.Description.Width = 300;
+            this.btnReport.Location = new System.Drawing.Point(591, 149);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(104, 20);
+            this.btnReport.TabIndex = 16;
+            this.btnReport.Text = "Reporte";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.BtnReport_Click);
             // 
             // frmCoursesManager
             // 
@@ -245,6 +256,7 @@ namespace INFOSiSView
             this.ClientSize = new System.Drawing.Size(743, 513);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.cmbCourseType);
             this.Controls.Add(this.lblCourseType);
             this.Controls.Add(this.btnAddRequisite);
@@ -260,10 +272,10 @@ namespace INFOSiSView
             this.Controls.Add(this.lblRequisite);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.dgv);
+            this.Controls.Add(this.dgvCourses);
             this.Name = "frmCoursesManager";
             this.Text = "Gestión de Cursos";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,7 +285,11 @@ namespace INFOSiSView
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgv;
+//<<<<<<< HEAD
+        //private System.Windows.Forms.DataGridView dgv;
+//=======
+        private System.Windows.Forms.DataGridView dgvCourses;
+//>>>>>>> c188204341aa69a58a0b97a24afa739fdf2cbc96
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblRequisite;
@@ -289,10 +305,17 @@ namespace INFOSiSView
         private System.Windows.Forms.Button btnAddRequisite;
         private System.Windows.Forms.Label lblCourseType;
         private System.Windows.Forms.ComboBox cmbCourseType;
+//<<<<<<< HEAD
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
-        private DataGridViewTextBoxColumn CourseName;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn Description;
+        //private DataGridViewTextBoxColumn CourseName;
+        //private DataGridViewTextBoxColumn Id;
+        //private DataGridViewTextBoxColumn Description;
+//=======
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameCourse;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.Button btnReport;
+//>>>>>>> c188204341aa69a58a0b97a24afa739fdf2cbc96
     }
 }

@@ -16,5 +16,13 @@ namespace INFOSiSView
         {
             InitializeComponent();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtPucpCode.Text == "")
+            {
+                MessageBox.Show("Ingrese un código", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
