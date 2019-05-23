@@ -1,6 +1,6 @@
 ﻿namespace INFOSiSView
 {
-    partial class mdiUser
+    partial class mdiAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdiUser));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdiAdmin));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.coursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +45,7 @@
             this.disponibilidadSemanalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestiónDePracticantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,7 +153,8 @@
             // practicantesToolStripMenuItem
             // 
             this.practicantesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.disponibilidadSemanalToolStripMenuItem});
+            this.disponibilidadSemanalToolStripMenuItem,
+            this.gestiónDePracticantesToolStripMenuItem});
             this.practicantesToolStripMenuItem.Name = "practicantesToolStripMenuItem";
             this.practicantesToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
             this.practicantesToolStripMenuItem.Text = "Practicantes";
@@ -179,7 +181,14 @@
             this.cambiarContraseñaToolStripMenuItem.Text = "Cambiar contraseña";
             this.cambiarContraseñaToolStripMenuItem.Click += new System.EventHandler(this.cambiarContraseñaToolStripMenuItem_Click);
             // 
-            // mdiUser
+            // gestiónDePracticantesToolStripMenuItem
+            // 
+            this.gestiónDePracticantesToolStripMenuItem.Name = "gestiónDePracticantesToolStripMenuItem";
+            this.gestiónDePracticantesToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.gestiónDePracticantesToolStripMenuItem.Text = "Gestión de practicantes";
+            this.gestiónDePracticantesToolStripMenuItem.Click += new System.EventHandler(this.gestiónDePracticantesToolStripMenuItem_Click);
+            // 
+            // mdiAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -191,8 +200,8 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "mdiUser";
-            this.Text = "INFOSiS - USUARIO";
+            this.Name = "mdiAdmin";
+            this.Text = "INFOSiS - ADMINISTRADOR";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -219,5 +228,6 @@
         private System.Windows.Forms.ToolStripMenuItem disponibilidadSemanalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarContraseñaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestiónDePracticantesToolStripMenuItem;
     }
 }

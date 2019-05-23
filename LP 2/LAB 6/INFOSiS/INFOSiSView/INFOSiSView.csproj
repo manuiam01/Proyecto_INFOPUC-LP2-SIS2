@@ -82,6 +82,18 @@
     <Compile Include="frmProfessorReport.Designer.cs">
       <DependentUpon>frmProfessorReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="mdiCoordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiCoordinator.Designer.cs">
+      <DependentUpon>mdiCoordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdiAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiAdmin.Designer.cs">
+      <DependentUpon>mdiAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="mdiUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +165,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInternReport.resx">
       <DependentUpon>frmInternReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiCoordinator.resx">
+      <DependentUpon>mdiCoordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiAdmin.resx">
+      <DependentUpon>mdiAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiUser.resx">
       <DependentUpon>mdiUser.cs</DependentUpon>

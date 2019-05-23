@@ -22,11 +22,13 @@ namespace INFOSiSView
             this.Hide();
             string user = txtUsername.Text;
             if (user == "admin"){
-                //Abrir mdiadmin
+                mdiAdmin mdiadmin = new mdiAdmin();
+                mdiadmin.ShowDialog();
             }
             else if (user == "coord")
             {
-                //Abrir mdiCoord
+                mdiCoordinator mdicoord = new mdiCoordinator();
+                mdicoord.ShowDialog();
             }
             else
             {
