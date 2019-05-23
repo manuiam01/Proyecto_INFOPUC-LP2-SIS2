@@ -64,6 +64,12 @@
     <Compile Include="frmInterestedManager.Designer.cs">
       <DependentUpon>frmInterestedManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPasswordManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPasswordManager.Designer.cs">
+      <DependentUpon>frmPasswordManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProfessorManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPasswordManager.resx">
+      <DependentUpon>frmPasswordManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProfessorManager.resx">
       <DependentUpon>frmProfessorManager.cs</DependentUpon>

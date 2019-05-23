@@ -19,6 +19,7 @@ namespace INFOSiSView
         private frmStudentManager frmstudent;
         private frmInterestedMailing frminterestedmail;
         private frmInterestedManager frminterested;
+        private frmPasswordManager frmpw;
         public mdiUser()
         {
             InitializeComponent();
@@ -152,6 +153,14 @@ namespace INFOSiSView
 
         private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (frmpw == null)
+            {
+                frmpw = new frmPasswordManager();
+                frmpw.FormClosing += fManage_Closingfrm;
+                frmpw.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
+            frmpw.Visible = true;
 
         }
     }
