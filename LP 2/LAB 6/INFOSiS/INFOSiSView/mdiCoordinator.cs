@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace INFOSiSView
 {
-    public partial class mdiUser : Form
+    public partial class mdiCoordinator : Form
     {
         private frmCourseHistoryManager frmcoursehistory;
         private frmCoursesManager frmcourse;
@@ -18,7 +18,10 @@ namespace INFOSiSView
         private frmStudentConsult frmstudentconsult;
         private frmStudentManager frmstudent;
         private frmInterestedMailing frminterestedmail;
-        public mdiUser()
+        private frmCourseReport frmreportecurso;
+        private frmInternReport frmreportepracticante;
+        private frmProfessorReport frmreporteprofesor;
+        public mdiCoordinator()
         {
             InitializeComponent();
             cambiarEstado(State.New);
@@ -57,6 +60,7 @@ namespace INFOSiSView
                     profesoresToolStripMenuItem.Enabled = true;
                     practicantesToolStripMenuItem.Enabled = true;
                     opcionesToolStripMenuItem.Enabled = true;
+                    reportesToolStripMenuItem.Enabled = true;
                     break;
                 case State.Modify:
                     coursesToolStripMenuItem.Enabled = false;
@@ -65,6 +69,7 @@ namespace INFOSiSView
                     profesoresToolStripMenuItem.Enabled = false;
                     practicantesToolStripMenuItem.Enabled = false;
                     opcionesToolStripMenuItem.Enabled = false;
+                    reportesToolStripMenuItem.Enabled = false;
                     break;
             }
 
@@ -142,6 +147,53 @@ namespace INFOSiSView
 
         private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void gestiónDePracticantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reporteDePracticantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (frmreportepracticante == null)
+            {
+                frmreportepracticante = new frmInternReport();
+                frmreportepracticante.FormClosing += fManage_Closingfrm;
+                frmreportepracticante.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
+            frmreportepracticante.Visible = true;
+
+        }
+
+        private void reporteDeProfesoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            if (frmreporteprofesor == null)
+            {
+                frmreporteprofesor = new frmProfessorReport();
+                frmreporteprofesor.FormClosing += fManage_Closingfrm;
+                frmreporteprofesor.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
+            frmreporteprofesor.Visible = true;
+            
+        }
+
+        private void reporteDeCursosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (frmreportecurso == null)
+            {
+                frmreportecurso = new frmCourseReport();
+                frmreportecurso.FormClosing += fManage_Closingfrm;
+                frmreportecurso.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
+            frmreportecurso.Visible = true;
 
         }
     }

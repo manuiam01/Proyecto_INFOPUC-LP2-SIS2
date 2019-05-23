@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace INFOSiSView
 {
-    public partial class mdiUser : Form
+    public partial class mdiAdmin : Form
     {
         private frmCourseHistoryManager frmcoursehistory;
         private frmCoursesManager frmcourse;
@@ -18,7 +18,7 @@ namespace INFOSiSView
         private frmStudentConsult frmstudentconsult;
         private frmStudentManager frmstudent;
         private frmInterestedMailing frminterestedmail;
-        public mdiUser()
+        public mdiAdmin()
         {
             InitializeComponent();
             cambiarEstado(State.New);
@@ -141,6 +141,11 @@ namespace INFOSiSView
         }
 
         private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gestiónDePracticantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
