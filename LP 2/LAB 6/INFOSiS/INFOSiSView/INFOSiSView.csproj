@@ -58,6 +58,12 @@
     <Compile Include="frmInterestedMailing.Designer.cs">
       <DependentUpon>frmInterestedMailing.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInterestedManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInterestedManager.Designer.cs">
+      <DependentUpon>frmInterestedManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProfessorManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInterestedMailing.resx">
       <DependentUpon>frmInterestedMailing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInterestedManager.resx">
+      <DependentUpon>frmInterestedManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

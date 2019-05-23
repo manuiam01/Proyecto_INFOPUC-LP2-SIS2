@@ -18,6 +18,7 @@ namespace INFOSiSView
         private frmStudentConsult frmstudentconsult;
         private frmStudentManager frmstudent;
         private frmInterestedMailing frminterestedmail;
+        private frmInterestedManager frminterested;
         public mdiUser()
         {
             InitializeComponent();
@@ -108,9 +109,10 @@ namespace INFOSiSView
 
         private void mandarPublicidadToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frminterestedmail = new frmInterestedMailing();
             if (frminterestedmail == null)
             {
-                frminterestedmail = new frmInterestedMailing();
+                
                 frminterestedmail.FormClosing += fManage_Closingfrm;
                 frminterestedmail.MdiParent = this;
                 cambiarEstado(State.Modify);
@@ -120,6 +122,14 @@ namespace INFOSiSView
 
         private void gestiónDeInteresadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (frminterested == null)
+            {
+                frminterested = new frmInterestedManager();
+                frminterested.FormClosing += fManage_Closingfrm;
+                frminterested.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
+            frminterested.Visible = true;
             
         }
 

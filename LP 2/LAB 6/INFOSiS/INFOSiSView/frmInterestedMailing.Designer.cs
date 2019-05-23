@@ -161,6 +161,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Enviar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -170,6 +171,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmInterestedMailing
             // 
@@ -188,6 +190,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmInterestedMailing";
             this.Text = "frmInterestedMailing";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInterestedMailing_Closing);
             this.Load += new System.EventHandler(this.frmInterestedMailing_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInterested)).EndInit();
             this.ResumeLayout(false);

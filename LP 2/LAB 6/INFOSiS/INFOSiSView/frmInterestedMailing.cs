@@ -21,7 +21,7 @@ namespace INFOSiSView
             cbInteres.Items.Add("AutoCAD");
             cbInteres.Items.Add("Excel");
             cbInteres.Items.Add("SQL");
-            
+            txtMensaje.Enabled = false;
             
             
             cbCurso.Enabled = false;
@@ -43,7 +43,7 @@ namespace INFOSiSView
             cbCurso.Text = "";
             cbCurso.Items.Clear();
             dgvInterested.Rows.Clear();
-            
+            txtMensaje.Clear();
             string tema = (string)cbInteres.SelectedItem;
             if(tema == "AutoCAD")
             {
@@ -84,17 +84,62 @@ namespace INFOSiSView
 
         private void cbCurso_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string curso = (string)cbCurso.SelectedItem;
             txtMensaje.Text = "";
-            foreach(DataGridViewRow row in dgvInterested.Rows)
-            {
-                string nombre = row.Cells[0].Value.ToString();
-                string correo = row.Cells[2].Value.ToString();
-                string sexo = row.Cells[3].Value.ToString();
-            }
+            txtMensaje.Text = "Estimad_ /*nombre interesado*/, se le comunica que el " +
+                "curso "+curso+" se comenzará a dictar en la fecha /*inserte fecha de curso*/."+
+                "Para obtener más información sobre este, puede llamar al número 626 2000 anexo 6666, entrar "
+                + "a la página www.dti.inf.pucp.pe.rowor o enviar un correo a dti@gmail.com";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Seguro que quieres enviar el correo?", "Aviso", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes) {
+                foreach (DataGridViewRow row in dgvInterested.Rows)
+                {
+                    string nombre = row.Cells[0].Value.ToString();
+                    string correo = row.Cells[2].Value.ToString();
+                    string sexo = row.Cells[3].Value.ToString();
+                }
+                DialogResult dialog2 = MessageBox.Show("Se enviaron los correos de manera correcta", "Aviso", MessageBoxButtons.OK);
+                if (dialog2 == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
+            else if(dialog == DialogResult.No)
+            {
+                string rowor = "uwur";
+            }
+
+            
+            
+        }
+
+        private void frmInterestedMailing_Closing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Seguro que quieres cerrar el formulario?","Aviso",MessageBoxButtons.YesNo);
+            if(dialog == DialogResult.Yes)
+            {
+                //this.Close();
+            }
+            else if (dialog == DialogResult.No)
+            {
+
+                e.Cancel = true ;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+ 
+            this.Close();
 
         }
     }
