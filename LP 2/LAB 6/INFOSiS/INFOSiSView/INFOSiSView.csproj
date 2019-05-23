@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAddRequisites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRequisites.Designer.cs">
+      <DependentUpon>frmAddRequisites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSession.Designer.cs">
+      <DependentUpon>frmAddSession.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCourseReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +151,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddRequisites.resx">
+      <DependentUpon>frmAddRequisites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSession.resx">
+      <DependentUpon>frmAddSession.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCourseHistoryManager.resx">
       <DependentUpon>frmCourseHistoryManager.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,246 +28,287 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.lblRequisite = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblAssistant = new System.Windows.Forms.Label();
+            this.lblProffesor = new System.Windows.Forms.Label();
+            this.lblStudent = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.cmbCourse = new System.Windows.Forms.ComboBox();
+            this.cmbAssistant = new System.Windows.Forms.ComboBox();
+            this.cmbProffesor = new System.Windows.Forms.ComboBox();
+            this.dgvStudents = new System.Windows.Forms.DataGridView();
+            this.btnAddSession = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnSelectSurvey = new System.Windows.Forms.Button();
+            this.lblSessions = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.lblSurvey = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.cmbStudent = new System.Windows.Forms.ComboBox();
+            this.btnAddStudent = new System.Windows.Forms.Button();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
+            this.lblStudents = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Código:";
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(58, 28);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(43, 13);
+            this.lblId.TabIndex = 0;
+            this.lblId.Text = "Código:";
             // 
             // lblRequisite
             // 
             this.lblRequisite.AutoSize = true;
-            this.lblRequisite.Location = new System.Drawing.Point(85, 162);
-            this.lblRequisite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRequisite.Location = new System.Drawing.Point(64, 80);
             this.lblRequisite.Name = "lblRequisite";
-            this.lblRequisite.Size = new System.Drawing.Size(49, 17);
+            this.lblRequisite.Size = new System.Drawing.Size(37, 13);
             this.lblRequisite.TabIndex = 4;
             this.lblRequisite.Text = "Curso:";
             // 
-            // label2
+            // lblAssistant
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 130);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Horas:";
+            this.lblAssistant.AutoSize = true;
+            this.lblAssistant.Location = new System.Drawing.Point(48, 132);
+            this.lblAssistant.Name = "lblAssistant";
+            this.lblAssistant.Size = new System.Drawing.Size(53, 13);
+            this.lblAssistant.TabIndex = 9;
+            this.lblAssistant.Text = "Asistente:";
             // 
-            // label3
+            // lblProffesor
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 98);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Lugar:";
+            this.lblProffesor.AutoSize = true;
+            this.lblProffesor.Location = new System.Drawing.Point(52, 106);
+            this.lblProffesor.Name = "lblProffesor";
+            this.lblProffesor.Size = new System.Drawing.Size(49, 13);
+            this.lblProffesor.TabIndex = 10;
+            this.lblProffesor.Text = "Profesor:";
             // 
-            // label4
+            // lblStudent
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(97, 66);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 17);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Día:";
+            this.lblStudent.AutoSize = true;
+            this.lblStudent.Location = new System.Drawing.Point(51, 184);
+            this.lblStudent.Name = "lblStudent";
+            this.lblStudent.Size = new System.Drawing.Size(45, 13);
+            this.lblStudent.TabIndex = 11;
+            this.lblStudent.Text = "Alumno:";
             // 
-            // label6
+            // txtId
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(64, 226);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Asistente:";
+            this.txtId.Location = new System.Drawing.Point(107, 25);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(208, 20);
+            this.txtId.TabIndex = 12;
             // 
-            // label7
+            // cmbCourse
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(69, 194);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 17);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Profesor:";
+            this.cmbCourse.FormattingEnabled = true;
+            this.cmbCourse.Location = new System.Drawing.Point(107, 77);
+            this.cmbCourse.Name = "cmbCourse";
+            this.cmbCourse.Size = new System.Drawing.Size(208, 21);
+            this.cmbCourse.TabIndex = 15;
             // 
-            // label8
+            // cmbAssistant
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(63, 258);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 17);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Alumnos:";
+            this.cmbAssistant.FormattingEnabled = true;
+            this.cmbAssistant.Location = new System.Drawing.Point(107, 129);
+            this.cmbAssistant.Name = "cmbAssistant";
+            this.cmbAssistant.Size = new System.Drawing.Size(208, 21);
+            this.cmbAssistant.TabIndex = 16;
             // 
-            // textBox1
+            // cmbProffesor
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 31);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 22);
-            this.textBox1.TabIndex = 12;
+            this.cmbProffesor.FormattingEnabled = true;
+            this.cmbProffesor.Location = new System.Drawing.Point(107, 103);
+            this.cmbProffesor.Name = "cmbProffesor";
+            this.cmbProffesor.Size = new System.Drawing.Size(208, 21);
+            this.cmbProffesor.TabIndex = 17;
             // 
-            // textBox2
+            // dgvStudents
             // 
-            this.textBox2.Location = new System.Drawing.Point(143, 127);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(276, 22);
-            this.textBox2.TabIndex = 13;
+            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.StudentName});
+            this.dgvStudents.Location = new System.Drawing.Point(51, 235);
+            this.dgvStudents.Name = "dgvStudents";
+            this.dgvStudents.Size = new System.Drawing.Size(591, 254);
+            this.dgvStudents.TabIndex = 19;
             // 
-            // textBox3
+            // btnAddSession
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 95);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(276, 22);
-            this.textBox3.TabIndex = 14;
+            this.btnAddSession.Location = new System.Drawing.Point(107, 49);
+            this.btnAddSession.Name = "btnAddSession";
+            this.btnAddSession.Size = new System.Drawing.Size(136, 23);
+            this.btnAddSession.TabIndex = 20;
+            this.btnAddSession.Text = "Añadir sesiones";
+            this.btnAddSession.UseVisualStyleBackColor = true;
+            this.btnAddSession.Click += new System.EventHandler(this.btnAddSession_Click);
             // 
-            // comboBox1
+            // btnModify
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(143, 159);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(276, 24);
-            this.comboBox1.TabIndex = 15;
+            this.btnModify.Location = new System.Drawing.Point(506, 75);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(136, 23);
+            this.btnModify.TabIndex = 21;
+            this.btnModify.Text = "Modificar";
+            this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
-            // comboBox2
+            // btnNew
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(143, 223);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(276, 24);
-            this.comboBox2.TabIndex = 16;
+            this.btnNew.Location = new System.Drawing.Point(506, 23);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(136, 23);
+            this.btnNew.TabIndex = 22;
+            this.btnNew.Text = "Nuevo";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // comboBox3
+            // btnSelectSurvey
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(143, 191);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(276, 24);
-            this.comboBox3.TabIndex = 17;
+            this.btnSelectSurvey.Location = new System.Drawing.Point(107, 153);
+            this.btnSelectSurvey.Name = "btnSelectSurvey";
+            this.btnSelectSurvey.Size = new System.Drawing.Size(136, 23);
+            this.btnSelectSurvey.TabIndex = 23;
+            this.btnSelectSurvey.Text = "Seleccionar encuesta";
+            this.btnSelectSurvey.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // lblSessions
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(143, 63);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(276, 22);
-            this.dateTimePicker1.TabIndex = 18;
+            this.lblSessions.AutoSize = true;
+            this.lblSessions.Location = new System.Drawing.Point(48, 54);
+            this.lblSessions.Name = "lblSessions";
+            this.lblSessions.Size = new System.Drawing.Size(53, 13);
+            this.lblSessions.TabIndex = 25;
+            this.lblSessions.Text = "Sesiones:";
             // 
-            // dataGridView1
+            // btnSearch
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(143, 258);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(713, 313);
-            this.dataGridView1.TabIndex = 19;
+            this.btnSearch.Location = new System.Drawing.Point(506, 49);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(136, 23);
+            this.btnSearch.TabIndex = 26;
+            this.btnSearch.Text = "Buscar";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // button1
+            // lblSurvey
             // 
-            this.button1.Location = new System.Drawing.Point(675, 27);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 28);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Agregar sesión";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblSurvey.AutoSize = true;
+            this.lblSurvey.Location = new System.Drawing.Point(48, 158);
+            this.lblSurvey.Name = "lblSurvey";
+            this.lblSurvey.Size = new System.Drawing.Size(55, 13);
+            this.lblSurvey.TabIndex = 28;
+            this.lblSurvey.Text = "Encuesta:";
             // 
-            // button2
+            // btnCancel
             // 
-            this.button2.Location = new System.Drawing.Point(675, 91);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(181, 28);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(506, 127);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(136, 23);
+            this.btnCancel.TabIndex = 29;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // button3
+            // btnSave
             // 
-            this.button3.Location = new System.Drawing.Point(675, 59);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(181, 28);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Nuevo";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(506, 101);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(136, 23);
+            this.btnSave.TabIndex = 30;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button4
+            // cmbStudent
             // 
-            this.button4.Location = new System.Drawing.Point(675, 123);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(181, 28);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "Seleccionar encuesta";
-            this.button4.UseVisualStyleBackColor = true;
+            this.cmbStudent.FormattingEnabled = true;
+            this.cmbStudent.Location = new System.Drawing.Point(107, 181);
+            this.cmbStudent.Name = "cmbStudent";
+            this.cmbStudent.Size = new System.Drawing.Size(208, 21);
+            this.cmbStudent.TabIndex = 31;
+            // 
+            // btnAddStudent
+            // 
+            this.btnAddStudent.Location = new System.Drawing.Point(364, 179);
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Size = new System.Drawing.Size(136, 23);
+            this.btnAddStudent.TabIndex = 32;
+            this.btnAddStudent.Text = "Añadir alumno";
+            this.btnAddStudent.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteStudent
+            // 
+            this.btnDeleteStudent.Location = new System.Drawing.Point(506, 179);
+            this.btnDeleteStudent.Name = "btnDeleteStudent";
+            this.btnDeleteStudent.Size = new System.Drawing.Size(136, 23);
+            this.btnDeleteStudent.TabIndex = 33;
+            this.btnDeleteStudent.Text = "Eliminar alumno";
+            this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            // 
+            // lblStudents
+            // 
+            this.lblStudents.AutoSize = true;
+            this.lblStudents.Location = new System.Drawing.Point(48, 219);
+            this.lblStudents.Name = "lblStudents";
+            this.lblStudents.Size = new System.Drawing.Size(89, 13);
+            this.lblStudents.TabIndex = 34;
+            this.lblStudents.Text = "Lista de alumnos:";
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "Código";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // StudentName
+            // 
+            this.StudentName.HeaderText = "Nombre del alumno";
+            this.StudentName.Name = "StudentName";
+            this.StudentName.ReadOnly = true;
+            this.StudentName.Width = 450;
             // 
             // frmCourseHistoryManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 617);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(686, 501);
+            this.Controls.Add(this.lblStudents);
+            this.Controls.Add(this.btnDeleteStudent);
+            this.Controls.Add(this.btnAddStudent);
+            this.Controls.Add(this.cmbStudent);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.lblSurvey);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.lblSessions);
+            this.Controls.Add(this.btnSelectSurvey);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.btnModify);
+            this.Controls.Add(this.btnAddSession);
+            this.Controls.Add(this.dgvStudents);
+            this.Controls.Add(this.cmbProffesor);
+            this.Controls.Add(this.cmbAssistant);
+            this.Controls.Add(this.cmbCourse);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.lblStudent);
+            this.Controls.Add(this.lblProffesor);
+            this.Controls.Add(this.lblAssistant);
             this.Controls.Add(this.lblRequisite);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.lblId);
             this.Name = "frmCourseHistoryManager";
             this.Text = "Gestión de Cursos Dictados";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,25 +316,30 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblRequisite;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label lblAssistant;
+        private System.Windows.Forms.Label lblProffesor;
+        private System.Windows.Forms.Label lblStudent;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.ComboBox cmbCourse;
+        private System.Windows.Forms.ComboBox cmbAssistant;
+        private System.Windows.Forms.ComboBox cmbProffesor;
+        private System.Windows.Forms.DataGridView dgvStudents;
+        private System.Windows.Forms.Button btnAddSession;
+        private System.Windows.Forms.Button btnModify;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnSelectSurvey;
+        private System.Windows.Forms.Label lblSessions;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label lblSurvey;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
+        private System.Windows.Forms.ComboBox cmbStudent;
+        private System.Windows.Forms.Button btnAddStudent;
+        private System.Windows.Forms.Button btnDeleteStudent;
+        private System.Windows.Forms.Label lblStudents;
     }
 }

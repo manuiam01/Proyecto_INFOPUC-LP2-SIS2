@@ -8,6 +8,6 @@ namespace INFOSiSView
 {
     public enum State
     {
-        New, Modify, Save, Cancel, Search
+        New, Modify, Save, Cancel, Search, Initial
     }
 }
