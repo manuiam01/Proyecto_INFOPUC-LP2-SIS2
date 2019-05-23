@@ -21,7 +21,7 @@ namespace INFOSiSView
             lbIntereses.Items.Add("Excel");
             lbIntereses.Items.Add("SQL");
             lbIntereses.Items.Add("AutoCAD");
-            button2.Enabled = false;
+            btnModify.Enabled = false;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -53,9 +53,9 @@ namespace INFOSiSView
                     rbWoman.Enabled = true;
                     lbIntereses.Enabled = true;
                     button4.Enabled = true;
-                    button2.Enabled = false;
+                    btnModify.Enabled = false;
                     lbIntereses.SelectedItems.Clear();
-                    button3.Enabled = false;
+                    btnSearch.Enabled = false;
                     break;
                 case State.Modify:
                     checkBox1.Enabled = false;
@@ -75,8 +75,8 @@ namespace INFOSiSView
                     rbPassport.Enabled = true;
                     rbWoman.Enabled = false;
                     lbIntereses.Enabled = false;
-                    button2.Enabled = true;
-                    button3.Enabled = true;
+                    btnModify.Enabled = true;
+                    btnSearch.Enabled = true;
                     button4.Enabled = false;
                     checkBox1.Enabled = true;
                     button5.Enabled = false;
@@ -203,5 +203,7 @@ namespace INFOSiSView
             ComponentsState(State.Search);
             caso = "dos";
         }
+
+
     }
 }

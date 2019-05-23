@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblPucpCode = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPucpCode = new System.Windows.Forms.TextBox();
             this.lblCourses = new System.Windows.Forms.Label();
             this.dgvCoursesHistory = new System.Windows.Forms.DataGridView();
             this.lblFirstName = new System.Windows.Forms.Label();
@@ -43,6 +43,9 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.Nombre_Curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Resultado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCoursesHistory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,12 +58,12 @@
             this.lblPucpCode.TabIndex = 0;
             this.lblPucpCode.Text = "Código PUCP:";
             // 
-            // textBox1
+            // txtPucpCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(186, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtPucpCode.Location = new System.Drawing.Point(186, 39);
+            this.txtPucpCode.Name = "txtPucpCode";
+            this.txtPucpCode.Size = new System.Drawing.Size(195, 20);
+            this.txtPucpCode.TabIndex = 1;
             // 
             // lblCourses
             // 
@@ -75,9 +78,13 @@
             // dgvCoursesHistory
             // 
             this.dgvCoursesHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCoursesHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre_Curso,
+            this.Nota,
+            this.Resultado});
             this.dgvCoursesHistory.Location = new System.Drawing.Point(47, 259);
             this.dgvCoursesHistory.Name = "dgvCoursesHistory";
-            this.dgvCoursesHistory.Size = new System.Drawing.Size(700, 208);
+            this.dgvCoursesHistory.Size = new System.Drawing.Size(561, 208);
             this.dgvCoursesHistory.TabIndex = 3;
             // 
             // lblFirstName
@@ -93,7 +100,7 @@
             // 
             this.txtFirstName.Location = new System.Drawing.Point(186, 69);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(336, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(295, 20);
             this.txtFirstName.TabIndex = 5;
             // 
             // lblMiddleName
@@ -146,12 +153,13 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(556, 37);
+            this.btnSearch.Location = new System.Drawing.Point(486, 37);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(122, 23);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lblEmail
             // 
@@ -169,11 +177,37 @@
             this.txtEmail.Size = new System.Drawing.Size(336, 20);
             this.txtEmail.TabIndex = 14;
             // 
+            // Nombre_Curso
+            // 
+            this.Nombre_Curso.Frozen = true;
+            this.Nombre_Curso.HeaderText = "Nombre_Curso";
+            this.Nombre_Curso.Name = "Nombre_Curso";
+            this.Nombre_Curso.ReadOnly = true;
+            this.Nombre_Curso.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nombre_Curso.Width = 300;
+            // 
+            // Nota
+            // 
+            this.Nota.Frozen = true;
+            this.Nota.HeaderText = "Nota";
+            this.Nota.Name = "Nota";
+            this.Nota.ReadOnly = true;
+            this.Nota.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Resultado
+            // 
+            this.Resultado.Frozen = true;
+            this.Resultado.HeaderText = "Resultado";
+            this.Resultado.Name = "Resultado";
+            this.Resultado.ReadOnly = true;
+            this.Resultado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Resultado.Width = 120;
+            // 
             // frmStudentConsult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 502);
+            this.ClientSize = new System.Drawing.Size(644, 502);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.btnSearch);
@@ -187,7 +221,7 @@
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.dgvCoursesHistory);
             this.Controls.Add(this.lblCourses);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPucpCode);
             this.Controls.Add(this.lblPucpCode);
             this.Name = "frmStudentConsult";
             this.Text = "Consultar Estudiante";
@@ -200,7 +234,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblPucpCode;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPucpCode;
         private System.Windows.Forms.Label lblCourses;
         private System.Windows.Forms.DataGridView dgvCoursesHistory;
         private System.Windows.Forms.Label lblFirstName;
@@ -214,5 +248,8 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Curso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Resultado;
     }
 }

@@ -67,13 +67,19 @@
             this.rbInactive = new System.Windows.Forms.RadioButton();
             this.lblCondition = new System.Windows.Forms.Label();
             this.rbActive = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProfessors = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido_Paterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido_Materno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNew = new System.Windows.Forms.Button();
             this.btModify = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnReporte = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProfessors)).BeginInit();
             this.SuspendLayout();
             // 
             // rbDNI
@@ -234,9 +240,9 @@
             this.lblCellphone.AutoSize = true;
             this.lblCellphone.Location = new System.Drawing.Point(36, 214);
             this.lblCellphone.Name = "lblCellphone";
-            this.lblCellphone.Size = new System.Drawing.Size(81, 13);
+            this.lblCellphone.Size = new System.Drawing.Size(42, 13);
             this.lblCellphone.TabIndex = 18;
-            this.lblCellphone.Text = "Número celular:";
+            this.lblCellphone.Text = "Celular:";
             // 
             // txtCellphone
             // 
@@ -419,19 +425,68 @@
             this.rbActive.Text = "Activo";
             this.rbActive.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvProfessors
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(39, 465);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(487, 150);
-            this.dataGridView1.TabIndex = 39;
+            this.dgvProfessors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProfessors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Apellido_Paterno,
+            this.Apellido_Materno,
+            this.Correo,
+            this.Celular});
+            this.dgvProfessors.Location = new System.Drawing.Point(39, 465);
+            this.dgvProfessors.Name = "dgvProfessors";
+            this.dgvProfessors.Size = new System.Drawing.Size(738, 150);
+            this.dgvProfessors.TabIndex = 39;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nombre.Width = 120;
+            // 
+            // Apellido_Paterno
+            // 
+            this.Apellido_Paterno.HeaderText = "Apellido_Paterno";
+            this.Apellido_Paterno.Name = "Apellido_Paterno";
+            this.Apellido_Paterno.ReadOnly = true;
+            this.Apellido_Paterno.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Apellido_Paterno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Apellido_Paterno.Width = 120;
+            // 
+            // Apellido_Materno
+            // 
+            this.Apellido_Materno.HeaderText = "Apellido_Materno";
+            this.Apellido_Materno.Name = "Apellido_Materno";
+            this.Apellido_Materno.ReadOnly = true;
+            this.Apellido_Materno.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Apellido_Materno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Apellido_Materno.Width = 120;
+            // 
+            // Correo
+            // 
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            this.Correo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Correo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Correo.Width = 220;
+            // 
+            // Celular
+            // 
+            this.Celular.HeaderText = "Celular";
+            this.Celular.Name = "Celular";
+            this.Celular.ReadOnly = true;
+            this.Celular.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Celular.Width = 120;
             // 
             // btnNew
             // 
             this.btnNew.Location = new System.Drawing.Point(451, 79);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.Size = new System.Drawing.Size(96, 23);
             this.btnNew.TabIndex = 40;
             this.btnNew.Text = "Nuevo";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -440,7 +495,7 @@
             // 
             this.btModify.Location = new System.Drawing.Point(451, 108);
             this.btModify.Name = "btModify";
-            this.btModify.Size = new System.Drawing.Size(75, 23);
+            this.btModify.Size = new System.Drawing.Size(96, 23);
             this.btModify.TabIndex = 41;
             this.btModify.Text = "Modificar";
             this.btModify.UseVisualStyleBackColor = true;
@@ -449,7 +504,7 @@
             // 
             this.btnSave.Location = new System.Drawing.Point(451, 137);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(96, 23);
             this.btnSave.TabIndex = 42;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -458,7 +513,7 @@
             // 
             this.btnCancel.Location = new System.Drawing.Point(451, 166);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(96, 23);
             this.btnCancel.TabIndex = 43;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -467,22 +522,33 @@
             // 
             this.btnSearch.Location = new System.Drawing.Point(451, 195);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(96, 23);
             this.btnSearch.TabIndex = 44;
             this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(451, 224);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(96, 23);
+            this.btnReporte.TabIndex = 45;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.BtnReporte_Click);
             // 
             // frmProfessorManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 638);
+            this.ClientSize = new System.Drawing.Size(614, 638);
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btModify);
             this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProfessors);
             this.Controls.Add(this.rbInactive);
             this.Controls.Add(this.lblCondition);
             this.Controls.Add(this.rbActive);
@@ -524,7 +590,7 @@
             this.Controls.Add(this.rbDNI);
             this.Name = "frmProfessorManager";
             this.Text = "Gestión de profesores";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProfessors)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -571,11 +637,17 @@
         private System.Windows.Forms.RadioButton rbInactive;
         private System.Windows.Forms.Label lblCondition;
         private System.Windows.Forms.RadioButton rbActive;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProfessors;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btModify;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido_Paterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido_Materno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Celular;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

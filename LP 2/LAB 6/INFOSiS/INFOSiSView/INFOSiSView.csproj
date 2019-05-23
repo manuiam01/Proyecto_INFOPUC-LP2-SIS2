@@ -49,8 +49,14 @@
     <Compile Include="frmCourseReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCourseReport.Designer.cs">
+    <Compile Include="frmCourseReport.designer.cs">
       <DependentUpon>frmCourseReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoursesManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoursesManager.designer.cs">
+      <DependentUpon>frmCoursesManager.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInterestedMailing.cs">
       <SubType>Form</SubType>
@@ -70,23 +76,41 @@
     <Compile Include="frmPasswordManager.Designer.cs">
       <DependentUpon>frmPasswordManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProfessorManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmProfessorManager.Designer.cs">
-      <DependentUpon>frmProfessorManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmInternReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmInternReport.Designer.cs">
       <DependentUpon>frmInternReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProfessorManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfessorManager.designer.cs">
+      <DependentUpon>frmProfessorManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProfessorReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProfessorReport.Designer.cs">
+    <Compile Include="frmProfessorReport.designer.cs">
       <DependentUpon>frmProfessorReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRHManagerEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRHManagerEmployee.designer.cs">
+      <DependentUpon>frmRHManagerEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentConsult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentConsult.designer.cs">
+      <DependentUpon>frmStudentConsult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWeekAvailability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWeekAvailability.designer.cs">
+      <DependentUpon>FrmWeekAvailability.cs</DependentUpon>
     </Compile>
     <Compile Include="mdiCoordinator.cs">
       <SubType>Form</SubType>
@@ -113,23 +137,11 @@
     <Compile Include="frmCourseHistoryManager.Designer.cs">
       <DependentUpon>frmCourseHistoryManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCoursesManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCoursesManager.Designer.cs">
-      <DependentUpon>frmCoursesManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmStudentConsult.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmStudentConsult.Designer.cs">
-      <DependentUpon>frmStudentConsult.cs</DependentUpon>
     </Compile>
     <Compile Include="frmStudentManager.cs">
       <SubType>Form</SubType>
@@ -166,6 +178,9 @@
     <EmbeddedResource Include="frmProfessorReport.resx">
       <DependentUpon>frmProfessorReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRHManagerEmployee.resx">
+      <DependentUpon>frmRHManagerEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStudentConsult.resx">
       <DependentUpon>frmStudentConsult.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInternReport.resx">
       <DependentUpon>frmInternReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWeekAvailability.resx">
+      <DependentUpon>FrmWeekAvailability.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiCoordinator.resx">
       <DependentUpon>mdiCoordinator.cs</DependentUpon>

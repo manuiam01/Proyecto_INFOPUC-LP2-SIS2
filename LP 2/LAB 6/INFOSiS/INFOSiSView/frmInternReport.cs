@@ -21,10 +21,17 @@ namespace INFOSiSView
         {
             String openFile;
             FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
-            DialogResult result = folderBrowser.ShowDialog();
-            if(result == DialogResult.OK)
+            if ((dtpDateTo.Value.Date < dtpDateFrom.Value.Date) || (dtpDateTo.Value.Date > DateTime.Now.Date) || (dtpDateFrom.Value.Date > DateTime.Now.Date))
             {
-                openFile = folderBrowser.SelectedPath;  //En openFile se guarda la ruta donde quiero guardar el reporte
+                MessageBox.Show("Seleccione fechas adecuadas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult result = folderBrowser.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    openFile = folderBrowser.SelectedPath;  //En openFile se guarda la ruta donde quiero guardar el reporte
+                }
             }
         }
     }

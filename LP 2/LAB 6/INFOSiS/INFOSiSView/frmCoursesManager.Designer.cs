@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCourses = new System.Windows.Forms.DataGridView();
             this.lblName = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.lblRequisite = new System.Windows.Forms.Label();
@@ -47,40 +44,24 @@
             this.btnAddRequisite = new System.Windows.Forms.Button();
             this.lblCourseType = new System.Windows.Forms.Label();
             this.cmbCourseType = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.NameCourse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnReport = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView
+            // dgvCourses
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
+            this.dgvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NameCourse,
             this.Id,
             this.Description});
-            this.dataGridView.Location = new System.Drawing.Point(72, 239);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(628, 222);
-            this.dataGridView.TabIndex = 0;
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Nombre";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            this.Name.Width = 200;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Código";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Descripción";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            this.Description.Width = 300;
+            this.dgvCourses.Location = new System.Drawing.Point(72, 239);
+            this.dgvCourses.Name = "dgvCourses";
+            this.dgvCourses.Size = new System.Drawing.Size(628, 222);
+            this.dgvCourses.TabIndex = 0;
             // 
             // lblName
             // 
@@ -151,27 +132,27 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(610, 20);
+            this.btnNew.Location = new System.Drawing.Point(591, 20);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(85, 20);
+            this.btnNew.Size = new System.Drawing.Size(104, 20);
             this.btnNew.TabIndex = 9;
             this.btnNew.Text = "Nuevo";
             this.btnNew.UseVisualStyleBackColor = true;
             // 
             // btnDisable
             // 
-            this.btnDisable.Location = new System.Drawing.Point(610, 72);
+            this.btnDisable.Location = new System.Drawing.Point(591, 72);
             this.btnDisable.Name = "btnDisable";
-            this.btnDisable.Size = new System.Drawing.Size(85, 20);
+            this.btnDisable.Size = new System.Drawing.Size(104, 20);
             this.btnDisable.TabIndex = 10;
             this.btnDisable.Text = "Deshabilitar";
             this.btnDisable.UseVisualStyleBackColor = true;
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(610, 46);
+            this.btnModify.Location = new System.Drawing.Point(591, 46);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(85, 20);
+            this.btnModify.Size = new System.Drawing.Size(104, 20);
             this.btnModify.TabIndex = 11;
             this.btnModify.Text = "Modificar";
             this.btnModify.UseVisualStyleBackColor = true;
@@ -211,11 +192,42 @@
             this.cmbCourseType.Size = new System.Drawing.Size(137, 21);
             this.cmbCourseType.TabIndex = 15;
             // 
+            // NameCourse
+            // 
+            this.NameCourse.HeaderText = "Nombre";
+            this.NameCourse.Name = "NameCourse";
+            this.NameCourse.ReadOnly = true;
+            this.NameCourse.Width = 200;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Código";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Descripción";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Width = 300;
+            // 
+            // btnReport
+            // 
+            this.btnReport.Location = new System.Drawing.Point(591, 98);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(104, 20);
+            this.btnReport.TabIndex = 16;
+            this.btnReport.Text = "Reporte";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.BtnReport_Click);
+            // 
             // frmCoursesManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 513);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.cmbCourseType);
             this.Controls.Add(this.lblCourseType);
             this.Controls.Add(this.btnAddRequisite);
@@ -231,10 +243,10 @@
             this.Controls.Add(this.lblRequisite);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.dataGridView);
-            //this.Name = "frmCoursesManager";
+            this.Controls.Add(this.dgvCourses);
+            this.Name = "frmCoursesManager";
             this.Text = "Gestión de Cursos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,10 +254,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridView dgvCourses;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblRequisite;
@@ -261,5 +270,9 @@
         private System.Windows.Forms.Button btnAddRequisite;
         private System.Windows.Forms.Label lblCourseType;
         private System.Windows.Forms.ComboBox cmbCourseType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameCourse;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.Button btnReport;
     }
 }

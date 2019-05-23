@@ -21,6 +21,10 @@ namespace INFOSiSView
         private frmCourseReport frmreportecurso;
         private frmInternReport frmreportepracticante;
         private frmProfessorReport frmreporteprofesor;
+        private frmRHManagerEmployee frminterns;
+        private FrmWeekAvailability frmweekavailability;
+        private frmPasswordManager frmpw;
+
         public mdiCoordinator()
         {
             InitializeComponent();
@@ -34,6 +38,9 @@ namespace INFOSiSView
             frmprofessor = null;
             frmstudentconsult = null;
             frmstudent = null;
+            frminterns = null;
+            frmweekavailability = null;
+            frmpw = null;
             cambiarEstado(State.New);
         }
 
@@ -46,6 +53,7 @@ namespace INFOSiSView
                 frmcourse.MdiParent=this;
                 cambiarEstado(State.Modify);
             }
+            frmcourse.enable_Report(true);
             frmcourse.Visible = true;
         }
 
@@ -60,7 +68,6 @@ namespace INFOSiSView
                     profesoresToolStripMenuItem.Enabled = true;
                     practicantesToolStripMenuItem.Enabled = true;
                     opcionesToolStripMenuItem.Enabled = true;
-                    reportesToolStripMenuItem.Enabled = true;
                     break;
                 case State.Modify:
                     coursesToolStripMenuItem.Enabled = false;
@@ -69,7 +76,6 @@ namespace INFOSiSView
                     profesoresToolStripMenuItem.Enabled = false;
                     practicantesToolStripMenuItem.Enabled = false;
                     opcionesToolStripMenuItem.Enabled = false;
-                    reportesToolStripMenuItem.Enabled = false;
                     break;
             }
 
@@ -125,7 +131,14 @@ namespace INFOSiSView
 
         private void gestiónDeInteresadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            if(frminterns == null)
+            {
+                frminterns = new frmRHManagerEmployee();
+                frminterns.FormClosing += fManage_Closingfrm;
+                frminterns.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
+            frminterns.Visible = true;
         }
 
         private void gestiónDeProfesoresToolStripMenuItem_Click(object sender, EventArgs e)
@@ -137,64 +150,43 @@ namespace INFOSiSView
                 frmprofessor.MdiParent = this;
                 cambiarEstado(State.Modify);
             }
+            frmprofessor.enable_Report(true);
             frmprofessor.Visible = true;
         }
 
         private void disponibilidadSemanalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (frmweekavailability == null)
+            {
+                frmweekavailability = new FrmWeekAvailability();
+                frmweekavailability.FormClosing += fManage_Closingfrm;
+                frmweekavailability.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
         }
 
         private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (frmpw == null)
+            {
+                frmpw = new frmPasswordManager();
+                frmpw.FormClosing += fManage_Closingfrm;
+                frmpw.MdiParent = this;
+                cambiarEstado(State.Modify);
+            }
+            frmpw.Visible = true;
         }
 
         private void gestiónDePracticantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void reporteDePracticantesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            if (frmreportepracticante == null)
+            if (frminterns == null)
             {
-                frmreportepracticante = new frmInternReport();
-                frmreportepracticante.FormClosing += fManage_Closingfrm;
-                frmreportepracticante.MdiParent = this;
+                frminterns = new frmRHManagerEmployee();
+                frminterns.FormClosing += fManage_Closingfrm;
+                frminterns.MdiParent = this;
                 cambiarEstado(State.Modify);
             }
-            frmreportepracticante.Visible = true;
-
-        }
-
-        private void reporteDeProfesoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-            if (frmreporteprofesor == null)
-            {
-                frmreporteprofesor = new frmProfessorReport();
-                frmreporteprofesor.FormClosing += fManage_Closingfrm;
-                frmreporteprofesor.MdiParent = this;
-                cambiarEstado(State.Modify);
-            }
-            frmreporteprofesor.Visible = true;
-            
-        }
-
-        private void reporteDeCursosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            if (frmreportecurso == null)
-            {
-                frmreportecurso = new frmCourseReport();
-                frmreportecurso.FormClosing += fManage_Closingfrm;
-                frmreportecurso.MdiParent = this;
-                cambiarEstado(State.Modify);
-            }
-            frmreportecurso.Visible = true;
-
+            frminterns.Visible = true;
         }
     }
 }

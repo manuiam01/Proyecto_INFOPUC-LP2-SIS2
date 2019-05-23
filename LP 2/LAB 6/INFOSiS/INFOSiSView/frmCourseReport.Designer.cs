@@ -37,7 +37,7 @@
             // 
             // btnRoot
             // 
-            this.btnRoot.Location = new System.Drawing.Point(134, 121);
+            this.btnRoot.Location = new System.Drawing.Point(112, 117);
             this.btnRoot.Name = "btnRoot";
             this.btnRoot.Size = new System.Drawing.Size(181, 27);
             this.btnRoot.TabIndex = 11;
@@ -47,22 +47,22 @@
             // 
             // dtpDateTo
             // 
-            this.dtpDateTo.Location = new System.Drawing.Point(135, 74);
+            this.dtpDateTo.Location = new System.Drawing.Point(112, 74);
             this.dtpDateTo.Name = "dtpDateTo";
-            this.dtpDateTo.Size = new System.Drawing.Size(200, 20);
+            this.dtpDateTo.Size = new System.Drawing.Size(225, 20);
             this.dtpDateTo.TabIndex = 10;
             // 
             // dtpDateFrom
             // 
-            this.dtpDateFrom.Location = new System.Drawing.Point(135, 42);
+            this.dtpDateFrom.Location = new System.Drawing.Point(112, 42);
             this.dtpDateFrom.Name = "dtpDateFrom";
-            this.dtpDateFrom.Size = new System.Drawing.Size(200, 20);
+            this.dtpDateFrom.Size = new System.Drawing.Size(225, 20);
             this.dtpDateFrom.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 46);
+            this.label1.Location = new System.Drawing.Point(63, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 8;
@@ -71,7 +71,7 @@
             // lblTo
             // 
             this.lblTo.AutoSize = true;
-            this.lblTo.Location = new System.Drawing.Point(81, 77);
+            this.lblTo.Location = new System.Drawing.Point(67, 76);
             this.lblTo.Name = "lblTo";
             this.lblTo.Size = new System.Drawing.Size(38, 13);
             this.lblTo.TabIndex = 7;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 191);
+            this.ClientSize = new System.Drawing.Size(390, 170);
             this.Controls.Add(this.btnRoot);
             this.Controls.Add(this.dtpDateTo);
             this.Controls.Add(this.dtpDateFrom);
