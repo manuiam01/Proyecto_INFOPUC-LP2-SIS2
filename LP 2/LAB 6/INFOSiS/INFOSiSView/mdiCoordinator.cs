@@ -24,6 +24,7 @@ namespace INFOSiSView
         private frmRHManagerEmployee frminterns;
         private FrmWeekAvailability frmweekavailability;
         private frmPasswordManager frmpw;
+        private frmInterestedManager frmInterestedManager;
 
         public mdiCoordinator()
         {
@@ -133,12 +134,12 @@ namespace INFOSiSView
         {
             if(frminterns == null)
             {
-                frminterns = new frmRHManagerEmployee();
-                frminterns.FormClosing += fManage_Closingfrm;
-                frminterns.MdiParent = this;
+                frmInterestedManager = new frmInterestedManager();
+                frmInterestedManager.FormClosing += fManage_Closingfrm;
+                frmInterestedManager.MdiParent = this;
                 cambiarEstado(State.Modify);
             }
-            frminterns.Visible = true;
+            frmInterestedManager.Visible = true;
         }
 
         private void gestiónDeProfesoresToolStripMenuItem_Click(object sender, EventArgs e)
@@ -163,6 +164,8 @@ namespace INFOSiSView
                 frmweekavailability.MdiParent = this;
                 cambiarEstado(State.Modify);
             }
+
+            frmweekavailability.Visible = true;
         }
 
         private void cambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
