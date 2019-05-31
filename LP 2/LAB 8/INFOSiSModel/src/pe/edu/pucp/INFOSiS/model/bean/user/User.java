@@ -1,50 +1,24 @@
-package pe.edu.pucp.INFOSiS.model.bean;
-import java.util.*;
+package pe.edu.pucp.INFOSiS.model.bean.user;
 
-/**
- * 
- */
 public class User {
 
-    /**
-     * Default constructor
-     */
+    private int id;
+    private String username;
+    private String password;
+    private UserType acces;
+    private boolean isActive;
+
     public User() {
     }
 
-    /**
-     * 
-     */
-    private int id;
-
-    /**
-     * 
-     */
-    private String username;
-
-    /**
-     * 
-     */
-    private String password;
-
-    /**
-     * 
-     */
-    private String acces_role;
-
-    /**
-     * 
-     */
-    private boolean isActive;
-
-    public User(int id, String username, String password, String acces_role, boolean isActive) {
+    public User(int id, String username, String password, UserType acces, boolean isActive) {
         this.id = id;
         this.username = username;
         this.password = password;
-        this.acces_role = acces_role;
+        this.acces = acces;
         this.isActive = isActive;
     }
-
+    
     public int getId() {
         return id;
     }
@@ -69,14 +43,6 @@ public class User {
         this.password = password;
     }
 
-    public String getAcces_role() {
-        return acces_role;
-    }
-
-    public void setAcces_role(String acces_role) {
-        this.acces_role = acces_role;
-    }
-
     public boolean isIsActive() {
         return isActive;
     }
@@ -84,6 +50,16 @@ public class User {
     public void setIsActive(boolean isActive) {
         this.isActive = isActive;
     }
+
+    public UserType getAcces() {
+        return acces;
+    }
+
+    public void setAcces(UserType acces) {
+        this.acces = acces;
+    }
+    
+    
 
 
 }

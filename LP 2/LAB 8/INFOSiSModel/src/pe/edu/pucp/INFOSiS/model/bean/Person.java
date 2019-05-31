@@ -1,61 +1,22 @@
 package pe.edu.pucp.INFOSiS.model.bean;
-import java.util.*;
 
 /**
  * 
  */
 public abstract class Person {
 
-    /**
-     * Default constructor
-     */
+    private String idNumber;
+    private String idType;
+    private String firstName;
+    private String middleName;
+    private String primaryLastName;
+    private String secondLastName;
+    private char gender;
+    private String email;
+    private String cellPhoneNumber;
+
     public Person() {
     }
-
-    /**
-     * 
-     */
-    private String idNumber;
-
-    /**
-     * 
-     */
-    private String idType;
-
-    /**
-     * 
-     */
-    private String firstName;
-
-    /**
-     * 
-     */
-    private String middleName;
-
-    /**
-     * 
-     */
-    private String primaryLastName;
-
-    /**
-     * 
-     */
-    private String secondLastName;
-
-    /**
-     * 
-     */
-    private char gender;
-
-    /**
-     * 
-     */
-    private String email;
-
-    /**
-     * 
-     */
-    private String cellPhoneNumber;
 
     public Person(String idNumber, String idType, String firstName, String middleName, String primaryLastName, String secondLastName, char gender, String email, String cellPhoneNumber) {
         this.idNumber = idNumber;
