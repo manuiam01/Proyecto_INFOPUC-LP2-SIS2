@@ -1,5 +1,6 @@
-package pe.edu.pucp.INFOSiS.model.bean;
+package pe.edu.pucp.INFOSiS.model.bean.HR;
 import java.util.*;
+import pe.edu.pucp.INFOSiS.model.bean.Person;
 
 /**
  * 
@@ -12,32 +13,11 @@ public abstract class Employee extends Person {
     public Employee() {
     }
 
-    /**
-     * 
-     */
     private String idPUCP;
-
-    /**
-     * 
-     */
     private String emailPUCP;
-
-    /**
-     * 
-     */
     private String address;
-
-    /**
-     * 
-     */
     private String homePhone;
-
-    /**
-     * 
-     */
     private Date birthDate;
-
- 
 
     public Employee(String idPUCP, String emailPUCP, String address, String homePhone, Date birthDate, String idNumber, String idType, String firstName, String middleName, String primaryLastName, String secondLastName, char gender, String email, String cellPhoneNumber) {
         super(idNumber, idType, firstName, middleName, primaryLastName, secondLastName, gender, email, cellPhoneNumber);

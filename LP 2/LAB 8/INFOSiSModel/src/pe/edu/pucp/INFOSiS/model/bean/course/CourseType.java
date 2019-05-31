@@ -1,4 +1,4 @@
-package pe.edu.pucp.INFOSiS.model.bean;
+package pe.edu.pucp.INFOSiS.model.bean.course;
 import java.util.*;
 
 /**
@@ -12,19 +12,9 @@ public class CourseType {
     public CourseType() {
     }
 
-    /**
-     * 
-     */
+
     private int id;
-
-    /**
-     * 
-     */
     private String name;
-
-    /**
-     * 
-     */
     public ArrayList<Course> coursesList;
 
     public CourseType(int id, String name, ArrayList<Course> coursesList) {

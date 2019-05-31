@@ -1,5 +1,9 @@
-package pe.edu.pucp.INFOSiS.model.bean;
+package pe.edu.pucp.INFOSiS.model.bean.student;
+import pe.edu.pucp.INFOSiS.model.bean.interested.Interested;
 import java.util.*;
+import pe.edu.pucp.INFOSiS.model.bean.course.CourseHistory;
+import pe.edu.pucp.INFOSiS.model.bean.course.CourseType;
+import pe.edu.pucp.INFOSiS.model.bean.course.Voucher;
 
 /**
  * 
@@ -12,24 +16,10 @@ public class Student extends Interested {
     public Student() {
     }
 
-    /**
-     * 
-     */
+
     private String homePhone;
-
-    /**
-     * 
-     */
     private ArrayList<String> idPUCPList;
-
-    /**
-     * 
-     */
     private Date birthDate;
-
-    /**
-     * 
-     */
     private String address;
 
     /**
@@ -37,20 +27,8 @@ public class Student extends Interested {
      * Se podría unir history con state de locación en una especie de tuplas.
      */
     private ArrayList<CourseHistory> history;
-
-    /**
-     * 
-     */
     private ArrayList<Float> historyGrade;
-
-    /**
-     * 
-     */
     private ArrayList<String> historyState;
-
-    /**
-     * 
-     */
     private ArrayList<Voucher> vouchers;
 
     public Student(String homePhone, ArrayList<String> idPUCPList, Date birthDate, String address, ArrayList<CourseHistory> history, ArrayList<Float> historyGrade, ArrayList<String> historyState, ArrayList<Voucher> vouchers, ArrayList<CourseType> courseTypes, boolean isUnsubscribed, String idNumber, String idType, String firstName, String middleName, String primaryLastName, String secondLastName, char gender, String email, String cellPhoneNumber) {

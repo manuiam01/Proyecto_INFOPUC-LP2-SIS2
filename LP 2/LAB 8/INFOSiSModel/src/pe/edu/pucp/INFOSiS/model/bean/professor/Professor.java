@@ -1,5 +1,8 @@
-package pe.edu.pucp.INFOSiS.model.bean;
+package pe.edu.pucp.INFOSiS.model.bean.professor;
+import pe.edu.pucp.INFOSiS.model.bean.HR.RoleHistory;
 import java.util.*;
+import pe.edu.pucp.INFOSiS.model.bean.course.Course;
+import pe.edu.pucp.INFOSiS.model.bean.Person;
 
 /**
  * 
@@ -12,34 +15,11 @@ public class Professor extends Person {
     public Professor() {
     }
 
-    /**
-     * 
-     */
     private String idPUCP;
-
-    /**
-     * 
-     */
     private String emailPUCP;
-
-    /**
-     * 
-     */
     private Date birthDate;
-
-    /**
-     * 
-     */
     private ArrayList<Course> coursesCanTeach;
-
-    /**
-     * 
-     */
     private boolean isActive;
-
-    /**
-     * 
-     */
     private ArrayList<RoleHistory> history;
 
     public Professor(String idPUCP, String emailPUCP, Date birthDate, ArrayList<Course> coursesCanTeach, boolean isActive, ArrayList<RoleHistory> history) {

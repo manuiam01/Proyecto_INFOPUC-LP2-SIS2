@@ -1,4 +1,4 @@
-package pe.edu.pucp.INFOSiS.model.bean;
+package pe.edu.pucp.INFOSiS.model.bean.HR;
 import java.util.*;
 
 /**
@@ -12,29 +12,10 @@ public class Role {
     public Role() {
     }
 
-    /**
-     * 
-     */
     private int id;
-
-    /**
-     * 
-     */
     private String name;
-
-    /**
-     * 
-     */
     private boolean isActive;
-
-    /**
-     * 
-     */
     private double minSalary;
-
-    /**
-     * 
-     */
     private double maxSalary;
 
     public Role(int id, String name, boolean isActive, double minSalary, double maxSalary) {

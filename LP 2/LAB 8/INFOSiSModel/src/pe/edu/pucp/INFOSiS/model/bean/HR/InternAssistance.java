@@ -1,4 +1,4 @@
-package pe.edu.pucp.INFOSiS.model.bean;
+package pe.edu.pucp.INFOSiS.model.bean.HR;
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -13,9 +13,6 @@ public class InternAssistance {
     public InternAssistance() {
     }
 
-    /**
-     * 
-     */
     private int id;
 
     /**

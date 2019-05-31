@@ -1,4 +1,4 @@
-package pe.edu.pucp.INFOSiS.model.bean;
+package pe.edu.pucp.INFOSiS.model.bean.HR;
 
 import java.util.Date;
 
@@ -7,15 +7,9 @@ import java.util.Date;
  */
 public class Coordinator extends Employee {
 
-    /**
-     * Default constructor
-     */
     public Coordinator() {
     }
 
-    /**
-     * 
-     */
     private String department;
 
     public Coordinator(String department, String idPUCP, String emailPUCP, String address, String homePhone, Date birthDate, String idNumber, String idType, String firstName, String middleName, String primaryLastName, String secondLastName, char gender, String email, String cellPhoneNumber) {

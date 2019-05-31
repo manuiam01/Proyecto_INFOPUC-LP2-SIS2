@@ -1,5 +1,7 @@
-package pe.edu.pucp.INFOSiS.model.bean;
+package pe.edu.pucp.INFOSiS.model.bean.course;
 
+import pe.edu.pucp.INFOSiS.model.bean.student.Student;
+import pe.edu.pucp.INFOSiS.model.bean.professor.Professor;
 import java.io.File;
 import java.util.*;
 
@@ -14,9 +16,6 @@ public class CourseHistory {
     public CourseHistory() {
     }
 
-    /**
-     * 
-     */
     private int id;
 
     /**
@@ -24,60 +23,19 @@ public class CourseHistory {
      * Se podría unir Date con String de locación en una especie de tuplas.
      */
     private ArrayList<Date> sessions;
-
     /**
      * Por cada sesión
      */
     private ArrayList<String> locations;
-
-    /**
-     * 
-     */
     private ArrayList<Integer> hoursSession;
-
-    /**
-     * 
-     */
     private Course course;
-
-    /**
-     * 
-     */
     private Professor professor;
-
-    /**
-     * 
-     */
     private Professor assistant;
-
-    /**
-     * 
-     */
     private int hours;
-
-    /**
-     * 
-     */
     private File survey;
-
-    /**
-     * 
-     */
     private ArrayList<Student> students;
-
-    /**
-     * 
-     */
     private ArrayList<Voucher> vouchers;
-
-    /**
-     * 
-     */
     private ArrayList<Float> historyGrade;
-
-    /**
-     * 
-     */
     private ArrayList<String> historyState;
 
     public CourseHistory(int id, ArrayList<Date> sessions, ArrayList<String> locations, ArrayList<Integer> hoursSession, Course course, Professor professor, Professor assistant, int hours, File survey, ArrayList<Student> students, ArrayList<Voucher> vouchers, ArrayList<Float> historyGrade, ArrayList<String> historyState) {

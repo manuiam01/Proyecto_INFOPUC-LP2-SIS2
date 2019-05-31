@@ -1,4 +1,4 @@
-package pe.edu.pucp.INFOSiS.model.bean;
+package pe.edu.pucp.INFOSiS.model.bean.HR;
 import java.util.*;
 
 /**
@@ -11,30 +11,10 @@ public class RoleHistory extends Role {
      */
     public RoleHistory() {
     }
-
-    /**
-     * 
-     */
     private int id;
-
-    /**
-     * 
-     */
     private Date beginDate;
-
-    /**
-     * 
-     */
     private Date endDate;
-
-    /**
-     * 
-     */
     private boolean isActual;
-
-    /**
-     * 
-     */
     private int hours;
 
     public RoleHistory(int id, Date beginDate, Date endDate, boolean isActual, int hours) {

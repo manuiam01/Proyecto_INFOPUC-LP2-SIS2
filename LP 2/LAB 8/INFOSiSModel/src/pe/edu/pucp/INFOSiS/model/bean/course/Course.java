@@ -1,4 +1,4 @@
-package pe.edu.pucp.INFOSiS.model.bean;
+package pe.edu.pucp.INFOSiS.model.bean.course;
 import java.io.File;
 import java.util.*;
 
@@ -13,49 +13,14 @@ public class Course {
     public Course() {
     }
 
-    /**
-     * 
-     */
     private String id;
-
-    /**
-     * 
-     */
     private String name;
-
-    /**
-     * 
-     */
     private boolean isActive;
-
-    /**
-     * 
-     */
     private CourseType courseType;
-
-    /**
-     * 
-     */
     private String description;
-
-    /**
-     * 
-     */
     private File syllabus;
-
-    /**
-     * 
-     */
     private ArrayList<String> contents;
-
-    /**
-     * 
-     */
     private ArrayList<Course> requisites;
-
-    /**
-     * 
-     */
     private ArrayList<Course> courseHistory;
 
     public Course(String id, String name, boolean isActive, CourseType courseType, String description, File syllabus, ArrayList<String> contents, ArrayList<Course> requisites, ArrayList<Course> courseHistory) {

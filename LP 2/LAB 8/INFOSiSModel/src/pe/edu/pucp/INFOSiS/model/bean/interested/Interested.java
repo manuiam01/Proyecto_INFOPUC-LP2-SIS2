@@ -1,5 +1,7 @@
-package pe.edu.pucp.INFOSiS.model.bean;
+package pe.edu.pucp.INFOSiS.model.bean.interested;
 import java.util.*;
+import pe.edu.pucp.INFOSiS.model.bean.course.CourseType;
+import pe.edu.pucp.INFOSiS.model.bean.Person;
 
 /**
  * 
@@ -12,14 +14,7 @@ public class Interested extends Person {
     public Interested() {
     }
 
-    /**
-     * 
-     */
     private ArrayList<CourseType> courseTypes;
-
-    /**
-     * 
-     */
     private boolean isUnsubscribed;
 
   

@@ -1,4 +1,5 @@
-package pe.edu.pucp.INFOSiS.model.bean;
+package pe.edu.pucp.INFOSiS.model.bean.course;
+import pe.edu.pucp.INFOSiS.model.bean.student.Student;
 import java.util.*;
 
 /**
@@ -12,22 +13,11 @@ public class Voucher {
     public Voucher() {
     }
 
-    /**
-     * 
-     */
     private int id;
-
-  
     private String type;
-
-    
     private double amount;
-
     private Date date;
-
     private CourseHistory course;
-
-    
     private Student student;
 
     public Voucher(int id, String type, double amount, Date date, CourseHistory course, Student student) {
@@ -38,8 +28,6 @@ public class Voucher {
         this.course = course;
         this.student = student;
     }
-    
-    
 
     public int getId() {
         return id;
