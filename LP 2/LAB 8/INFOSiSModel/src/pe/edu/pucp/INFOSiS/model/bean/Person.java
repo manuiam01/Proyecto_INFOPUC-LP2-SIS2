@@ -6,19 +6,19 @@ package pe.edu.pucp.INFOSiS.model.bean;
 public abstract class Person {
 
     private String idNumber;
-    private String idType;
+    private int idType;
     private String firstName;
     private String middleName;
     private String primaryLastName;
     private String secondLastName;
-    private char gender;
+    private String gender;
     private String email;
     private String cellPhoneNumber;
 
     public Person() {
     }
 
-    public Person(String idNumber, String idType, String firstName, String middleName, String primaryLastName, String secondLastName, char gender, String email, String cellPhoneNumber) {
+    public Person(String idNumber, int idType, String firstName, String middleName, String primaryLastName, String secondLastName, String gender, String email, String cellPhoneNumber) {
         this.idNumber = idNumber;
         this.idType = idType;
         this.firstName = firstName;
@@ -38,11 +38,11 @@ public abstract class Person {
         this.idNumber = idNumber;
     }
 
-    public String getIdType() {
+    public int getIdType() {
         return idType;
     }
 
-    public void setIdType(String idType) {
+    public void setIdType(int idType) {
         this.idType = idType;
     }
 
@@ -78,11 +78,11 @@ public abstract class Person {
         this.secondLastName = secondLastName;
     }
 
-    public char getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 

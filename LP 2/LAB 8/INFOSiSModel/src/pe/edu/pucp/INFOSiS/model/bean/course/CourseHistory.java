@@ -17,15 +17,7 @@ public class CourseHistory {
     }
 
     private int id;
-
-    /**
-     * Si se usa: https://www.baeldung.com/java-tuples
-     * Se podría unir Date con String de locación en una especie de tuplas.
-     */
     private ArrayList<Date> sessions;
-    /**
-     * Por cada sesión
-     */
     private ArrayList<String> locations;
     private ArrayList<Integer> hoursSession;
     private Course course;

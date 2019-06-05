@@ -1,5 +1,6 @@
 package pe.edu.pucp.INFOSiS.model.bean.HR;
 import java.util.*;
+import pe.edu.pucp.INFOSiS.model.bean.user.User;
 
 /**
  * 
@@ -23,8 +24,8 @@ public class Intern extends Employee {
      */
     private String weekSchedule;
 
-    public Intern(ArrayList<RoleHistory> history, ArrayList<InternAssistance> assistance, String weekAvailability, String weekSchedule, String idPUCP, String emailPUCP, String address, String homePhone, Date birthDate, String idNumber, String idType, String firstName, String middleName, String primaryLastName, String secondLastName, char gender, String email, String cellPhoneNumber) {
-        super(idPUCP, emailPUCP, address, homePhone, birthDate, idNumber, idType, firstName, middleName, primaryLastName, secondLastName, gender, email, cellPhoneNumber);
+    public Intern(ArrayList<RoleHistory> history, ArrayList<InternAssistance> assistance, String weekAvailability, String weekSchedule, String idPUCP, String emailPUCP, String address, String homePhone, Date birthDate, User user, String idNumber, int idType, String firstName, String middleName, String primaryLastName, String secondLastName, String gender, String email, String cellPhoneNumber) {
+        super(idPUCP, emailPUCP, address, homePhone, birthDate, user, idNumber, idType, firstName, middleName, primaryLastName, secondLastName, gender, email, cellPhoneNumber);
         this.history = history;
         this.assistance = assistance;
         this.weekAvailability = weekAvailability;

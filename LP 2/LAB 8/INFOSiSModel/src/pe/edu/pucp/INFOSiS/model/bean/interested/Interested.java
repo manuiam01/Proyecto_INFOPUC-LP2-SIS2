@@ -19,7 +19,7 @@ public class Interested extends Person {
 
   
 
-    public Interested(ArrayList<CourseType> courseTypes, boolean isUnsubscribed, String idNumber, String idType, String firstName, String middleName, String primaryLastName, String secondLastName, char gender, String email, String cellPhoneNumber) {
+    public Interested(ArrayList<CourseType> courseTypes, boolean isUnsubscribed, String idNumber, int idType, String firstName, String middleName, String primaryLastName, String secondLastName, String gender, String email, String cellPhoneNumber) {
         super(idNumber, idType, firstName, middleName, primaryLastName, secondLastName, gender, email, cellPhoneNumber);
         this.courseTypes = courseTypes;
         this.isUnsubscribed = isUnsubscribed;

@@ -63,7 +63,7 @@ public class Professor extends Person {
         this.coursesCanTeach = coursesCanTeach;
     }
 
-    public boolean isIsActive() {
+    public boolean getIsActive() {
         return isActive;
     }
 

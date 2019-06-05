@@ -21,17 +21,12 @@ public class Student extends Interested {
     private ArrayList<String> idPUCPList;
     private Date birthDate;
     private String address;
-
-    /**
-     * Si se usa: https://www.baeldung.com/java-tuples
-     * Se podría unir history con state de locación en una especie de tuplas.
-     */
     private ArrayList<CourseHistory> history;
     private ArrayList<Float> historyGrade;
     private ArrayList<String> historyState;
     private ArrayList<Voucher> vouchers;
 
-    public Student(String homePhone, ArrayList<String> idPUCPList, Date birthDate, String address, ArrayList<CourseHistory> history, ArrayList<Float> historyGrade, ArrayList<String> historyState, ArrayList<Voucher> vouchers, ArrayList<CourseType> courseTypes, boolean isUnsubscribed, String idNumber, String idType, String firstName, String middleName, String primaryLastName, String secondLastName, char gender, String email, String cellPhoneNumber) {
+    public Student(String homePhone, ArrayList<String> idPUCPList, Date birthDate, String address, ArrayList<CourseHistory> history, ArrayList<Float> historyGrade, ArrayList<String> historyState, ArrayList<Voucher> vouchers, ArrayList<CourseType> courseTypes, boolean isUnsubscribed, String idNumber, int idType, String firstName, String middleName, String primaryLastName, String secondLastName, String gender, String email, String cellPhoneNumber) {
         super(courseTypes, isUnsubscribed, idNumber, idType, firstName, middleName, primaryLastName, secondLastName, gender, email, cellPhoneNumber);
         this.homePhone = homePhone;
         this.idPUCPList = idPUCPList;

@@ -51,7 +51,7 @@ public class Course {
         this.name = name;
     }
 
-    public boolean isIsActive() {
+    public boolean getIsActive() {
         return isActive;
     }
 
