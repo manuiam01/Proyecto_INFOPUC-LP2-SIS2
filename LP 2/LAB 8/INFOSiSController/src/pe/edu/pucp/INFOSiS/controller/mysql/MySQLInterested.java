@@ -78,6 +78,7 @@ public class MySQLInterested {
                 PreparedStatement ps = con.prepareStatement(sql);
                 ps.setString(1,interested.getIdNumber());
                 ps.setInt(2,c.getId());
+                ps.executeQuery();
             }
             con.close();
         }catch(Exception ex){
@@ -87,6 +88,7 @@ public class MySQLInterested {
     }
     
     public int disable(Interested interested){
+        int result = 0;
         try{
             DBManager dbManager = DBManager.getdbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
@@ -94,15 +96,12 @@ public class MySQLInterested {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1,0);
             ps.setString(2,interested.getIdNumber());
-//            cs.setString(1,course.getName());
-//            cs.setBoolean(2,course.getIsActive());
-//            cs.setObject(3,course.getSyllabus());
-//            cs.setInt(4,id);
+            ps.executeQuery();
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        return 0;
+        return 1;
     }
     
     public ArrayList<Interested> queryAll(){
@@ -111,26 +110,23 @@ public class MySQLInterested {
             DBManager dbManager = DBManager.getdbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             Statement sentence = con.createStatement();
-            String query = "SELECT * FROM Interns";
+            String query = "SELECT * FROM Interested";
             ResultSet rs = sentence.executeQuery(query);
-//            while(rs.next()){
-//                Intern intern = new Intern();
-//                String idIntern = rs.getString("idIntern");
-//                int idUser = rs.getInt("idUser");      
-//                String idNumber = rs.getString("idNumber");
-//                String firstName = rs.getString("firstName");
-//                String middleName = rs.getString("middleName");
-//                String primaryLastName = rs.getString("primaryLastName");
-//                String secondLastName = rs.getString("secondLastName");
-//                String emailPUCP = rs.getString("emailPUCP");
-//      //          intern.setIdIntern(idIntern);
-//                intern.setFirstName(firstName);
-//                intern.setMiddleName(middleName);
-//                intern.setPrimaryLastName(primaryLastName);
-//                intern.setSecondLastName(secondLastName);
-//                intern.setEmailPUCP(emailPUCP);
-//                interns.add(intern);
-//            }
+            while(rs.next()){
+                Interested inte = new Interested();
+                inte.setIsUnsubscribed(rs.getBoolean("isUnsusbscribed"));
+                inte.setFirstName(rs.getString("firstName"));
+                inte.setMiddleName(rs.getString("middleName"));
+                inte.setPrimaryLastName(rs.getString("primaryLastName"));
+                inte.setSecondLastName(rs.getString("secondLastName"));
+                inte.setGender(rs.getString("gender"));
+                inte.setEmail(rs.getString("emailPUCP"));
+                inte.setCellPhoneNumber(rs.getString("cellPhoneNumber"));
+                inte.setIdNumber(rs.getString("idNumber"));
+                if (inte.isIsUnsubscribed()){
+                    interested.add(inte);
+                }
+            }
             con.close();
         }catch(SQLException ex){
             System.out.println(ex.getMessage());
@@ -140,34 +136,39 @@ public class MySQLInterested {
     
     public ArrayList<Interested> queryAllByCourseType(CourseType coursetype){
         ArrayList<Interested> interested = new ArrayList<Interested>();
+        int idcoursetype = coursetype.getId();
         try{
             DBManager dbManager = DBManager.getdbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
             Statement sentence = con.createStatement();
-            String query = "SELECT * FROM Interns";
+            String query = "SELECT * FROM Interested";
             ResultSet rs = sentence.executeQuery(query);
-//            while(rs.next()){
-//                Intern intern = new Intern();
-//                String idIntern = rs.getString("idIntern");
-//                int idUser = rs.getInt("idUser");      
-//                String idNumber = rs.getString("idNumber");
-//                String firstName = rs.getString("firstName");
-//                String middleName = rs.getString("middleName");
-//                String primaryLastName = rs.getString("primaryLastName");
-//                String secondLastName = rs.getString("secondLastName");
-//                String emailPUCP = rs.getString("emailPUCP");
-//      //          intern.setIdIntern(idIntern);
-//                intern.setFirstName(firstName);
-//                intern.setMiddleName(middleName);
-//                intern.setPrimaryLastName(primaryLastName);
-//                intern.setSecondLastName(secondLastName);
-//                intern.setEmailPUCP(emailPUCP);
-//                interns.add(intern);
-//            }
+            while(rs.next()){
+                Interested inte = new Interested();
+                inte.setIsUnsubscribed(rs.getBoolean("isUnsusbscribed"));
+                inte.setFirstName(rs.getString("firstName"));
+                inte.setMiddleName(rs.getString("middleName"));
+                inte.setPrimaryLastName(rs.getString("primaryLastName"));
+                inte.setSecondLastName(rs.getString("secondLastName"));
+                inte.setGender(rs.getString("gender"));
+                inte.setEmail(rs.getString("emailPUCP"));
+                inte.setCellPhoneNumber(rs.getString("cellPhoneNumber"));
+                inte.setIdNumber(rs.getString("idNumber"));
+                if (inte.isIsUnsubscribed()){
+                    String query2 = "SELECT * FROM InterestedxCourseType WHERE idNumber =?;";
+                    ResultSet rs2 = sentence.executeQuery(query2);
+                    while(rs.next()){
+                        if(rs2.getInt("idCourseType")==idcoursetype){
+                            interested.add(inte);
+                            break;
+                        }
+                    }
+                }
+            }
             con.close();
         }catch(SQLException ex){
             System.out.println(ex.getMessage());
-        }
+        }    
         return interested;
     }
 }
