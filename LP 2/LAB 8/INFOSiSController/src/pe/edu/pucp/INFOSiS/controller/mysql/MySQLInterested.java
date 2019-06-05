@@ -83,14 +83,17 @@ public class MySQLInterested {
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        return 0;
+        return result;
     }
     
     public int disable(Interested interested){
         try{
             DBManager dbManager = DBManager.getdbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call UPDATE_COURSE(?,?,?,?)}");
+            String sql = "UPDATE Interested set isUnsuscribed = ? where idNumber = ?;";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1,0);
+            ps.setString(2,interested.getIdNumber());
 //            cs.setString(1,course.getName());
 //            cs.setBoolean(2,course.getIsActive());
 //            cs.setObject(3,course.getSyllabus());
