@@ -129,7 +129,7 @@ public class IntersReportForm extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection(dbManager.getUrl(),
                     dbManager.getUser(), dbManager.getPassword());
             //JasperReport reporte = (JasperReport) JRLoader.loadObjectFromFile(IntersReportForm.class.getResource("\\pe\\edu\\pucp\\infosis\\reports\\InternsReport.jasper").getFile());
-            JasperReport reporte = (JasperReport) JRLoader.loadObjectFromFile("C:\\Users\\ASUS\\Desktop\\Intento 2\\Proyecto_INFOPUC-LP2-SIS2\\LP 2\\LAB 8\\INFOSiS\\src\\pe\\edu\\pucp\\infosis\\reports\\internsReport.jasper");
+            JasperReport reporte = (JasperReport) JRLoader.loadObjectFromFile(".\\src\\pe\\edu\\pucp\\infosis\\reports\\internsReport.jasper");
             HashMap hm = new HashMap();
             hm.put("idIntern",txtIdIntern.getText());
             hm.put("nombre",txtNameIntern.getText());
