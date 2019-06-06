@@ -24,7 +24,24 @@ public class Interested extends Person {
     private int id;
     private ArrayList<CourseType> courseTypes;
     private boolean isUnsubscribed;
+    private String emailPUCP;
+    private Date regDate;
 
+    public Date getRegDate() {
+        return regDate;
+    }
+
+    public void setRegDate(Date regDate) {
+        this.regDate = regDate;
+    }
+
+    public String getEmailPUCP() {
+        return emailPUCP;
+    }
+
+    public void setEmailPUCP(String emailPUCP) {
+        this.emailPUCP = emailPUCP;
+    }
   
 
     public Interested(ArrayList<CourseType> courseTypes, boolean isUnsubscribed, String idNumber, int idType, String firstName, String middleName, String primaryLastName, String secondLastName, String gender, String email, String cellPhoneNumber) {

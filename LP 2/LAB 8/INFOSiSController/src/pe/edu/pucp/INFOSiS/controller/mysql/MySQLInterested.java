@@ -7,6 +7,7 @@ package pe.edu.pucp.INFOSiS.controller.mysql;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,7 +30,7 @@ public class MySQLInterested {
         try{
             DBManager dbManager = DBManager.getdbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call INSERT_INTERESTED(?,?,?,?,?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call INSERT_INTERESTED(?,?,?,?,?,?,?,?,?)}");
             cs.setString(1,interested.getFirstName());
             cs.setString(2,interested.getPrimaryLastName());
             cs.setString(3,interested.getMiddleName());
@@ -38,10 +39,11 @@ public class MySQLInterested {
             cs.setString(6,interested.getEmail());
             cs.setString(7,interested.getCellPhoneNumber());
             cs.setString(8,interested.getIdNumber());
-            cs.registerOutParameter("_idInterested", java.sql.Types.INTEGER);
+            cs.setDate(9,(Date)interested.getRegDate());
+            //cs.registerOutParameter("_idInterested", java.sql.Types.INTEGER);
             result = cs.executeUpdate();
-            int id = cs.getInt("idInterested");
-            interested.setId(id);
+            //int id = cs.getInt("idInterested");
+            //interested.setId(id);
             ArrayList<CourseType> courses = new ArrayList<CourseType>();
             courses = interested.getCourseTypes();
             for(CourseType c : courses){
@@ -121,9 +123,11 @@ public class MySQLInterested {
                 inte.setPrimaryLastName(rs.getString("primaryLastName"));
                 inte.setSecondLastName(rs.getString("secondLastName"));
                 inte.setGender(rs.getString("gender"));
-                inte.setEmail(rs.getString("emailPUCP"));
+                inte.setEmail(rs.getString("email"));
+                inte.setEmailPUCP(rs.getString("emailPUCP"));
                 inte.setCellPhoneNumber(rs.getString("cellPhoneNumber"));
                 inte.setIdNumber(rs.getString("idNumber"));
+                inte.setRegDate(rs.getDate("regDate"));
                 if (inte.isIsUnsubscribed()){
                     interested.add(inte);
                 }
@@ -152,9 +156,11 @@ public class MySQLInterested {
                 inte.setPrimaryLastName(rs.getString("primaryLastName"));
                 inte.setSecondLastName(rs.getString("secondLastName"));
                 inte.setGender(rs.getString("gender"));
-                inte.setEmail(rs.getString("emailPUCP"));
+                inte.setEmail(rs.getString("email"));
+                inte.setEmailPUCP(rs.getString("emailPUCP"));
                 inte.setCellPhoneNumber(rs.getString("cellPhoneNumber"));
                 inte.setIdNumber(rs.getString("idNumber"));
+                inte.setRegDate(rs.getDate("regDate"));
                 if (inte.isIsUnsubscribed()){
                     String query2 = "SELECT * FROM InterestedxCourseType WHERE idNumber =?;";
                     ResultSet rs2 = sentence.executeQuery(query2);
