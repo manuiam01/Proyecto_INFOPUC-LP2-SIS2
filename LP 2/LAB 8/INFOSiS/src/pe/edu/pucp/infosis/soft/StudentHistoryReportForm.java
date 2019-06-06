@@ -100,7 +100,7 @@ public class StudentHistoryReportForm extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection(dbManager.getUrl(),
                     dbManager.getUser(), dbManager.getPassword());
             System.out.println("antessssss");
-            JasperReport reporte = (JasperReport) JRLoader.loadObjectFromFile("C:\\Users\\Usuario\\Documents\\CICLO 2019-1\\LP2\\GIT_INFOPUC\\Proyecto_INFOPUC-LP2-SIS2\\LP 2\\LAB 8\\INFOSiS\\src\\pe\\edu\\pucp\\infosis\\reports\\StudentReport.jasper");
+            JasperReport reporte = (JasperReport) JRLoader.loadObjectFromFile(".\\src\\pe\\edu\\pucp\\infosis\\reports\\StudentReport.jasper");
             System.out.println("despuesssssssss");
             HashMap hm = new HashMap();
             System.out.println("antes");

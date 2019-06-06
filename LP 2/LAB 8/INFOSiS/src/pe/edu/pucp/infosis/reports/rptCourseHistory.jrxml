@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8f2aea0d-1298-4245-a3dc-b2d0cd6be52b">
-	<property name="ireport.zoom" value="1.1"/>
-	<property name="ireport.x" value="38"/>
-	<property name="ireport.y" value="192"/>
+	<property name="ireport.zoom" value="0.9090909090909095"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
 	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
@@ -28,8 +28,7 @@
 FROM
      `CourseHistory` CourseHistory INNER JOIN `StudentHistory` StudentHistory ON CourseHistory.`idCourseHistory` = StudentHistory.`idCourseHistory`
      INNER JOIN `Course` Course ON CourseHistory.`idCourse` = Course.`idCourse`
-     INNER JOIN `Professors` Professors ON CourseHistory.`idAssistant` = Professors.`idProfessor`
-     AND Professors.`idProfessor` = CourseHistory.`idProfessor`
+     INNER JOIN `Professors` Professors ON Professors.`idProfessor` = CourseHistory.`idProfessor`
      INNER JOIN `StudentResults` StudentResults ON StudentHistory.`idStudentHistory` = StudentResults.`idStudentHistory`
      INNER JOIN `Student` Student ON StudentHistory.`idStudent` = Student.`idStudent`
 WHERE
@@ -55,7 +54,7 @@ WHERE
 			<frame>
 				<reportElement mode="Opaque" x="-20" y="0" width="822" height="65" forecolor="#FFFFFF" backcolor="#060668" uuid="85d0c087-23d8-4fd0-8d15-68779cbecbe3"/>
 				<staticText>
-					<reportElement style="Title" x="231" y="0" width="578" height="65" uuid="3d14c744-614c-4198-ac45-6bc9dbeda83d"/>
+					<reportElement style="Title" x="242" y="0" width="578" height="65" uuid="3d14c744-614c-4198-ac45-6bc9dbeda83d"/>
 					<textElement textAlignment="Right">
 						<font fontName="Gill Sans MT" size="54" isBold="false"/>
 					</textElement>
@@ -68,7 +67,7 @@ WHERE
 		<band splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="94" splitType="Stretch">
+		<band height="153" splitType="Stretch">
 			<frame>
 				<reportElement x="227" y="0" width="575" height="14" uuid="2cad932f-8dcb-4f86-a91d-7c95fa521fce"/>
 				<staticText>
@@ -79,7 +78,7 @@ WHERE
 					<text><![CDATA[FIN:]]></text>
 				</staticText>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement style="&lt;Different Values&gt;" positionType="Float" x="372" y="0" width="180" height="14" uuid="6b209d2e-791b-4cee-872d-2325e1427303"/>
+					<reportElement positionType="Float" x="372" y="0" width="180" height="14" uuid="6b209d2e-791b-4cee-872d-2325e1427303"/>
 					<textElement>
 						<font fontName="Gill Sans MT" size="12" isBold="false" pdfFontName="Helvetica"/>
 					</textElement>
@@ -108,7 +107,7 @@ WHERE
 				<text><![CDATA[APELLIDO:]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="&lt;Different Values&gt;" positionType="Float" x="181" y="0" width="170" height="14" uuid="c22104a6-9181-4ee7-91cf-d3861bb47996"/>
+				<reportElement positionType="Float" x="181" y="0" width="170" height="14" uuid="c22104a6-9181-4ee7-91cf-d3861bb47996"/>
 				<textElement>
 					<font fontName="Gill Sans MT" size="12" isBold="false" pdfFontName="Helvetica"/>
 				</textElement>
@@ -122,14 +121,14 @@ WHERE
 				<text><![CDATA[PROFESOR]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="&lt;Different Values&gt;" positionType="Float" x="95" y="56" width="140" height="14" uuid="325c9001-d9e9-431f-af07-5620e9c10ac6"/>
+				<reportElement positionType="Float" x="95" y="56" width="140" height="14" uuid="325c9001-d9e9-431f-af07-5620e9c10ac6"/>
 				<textElement>
 					<font fontName="Gill Sans MT" size="12" isBold="false" pdfFontName="Helvetica"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Professors_firstName}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="&lt;Different Values&gt;" positionType="Float" x="366" y="52" width="190" height="14" uuid="6549800e-2b0b-49ef-bc5b-79cf10133ff0"/>
+				<reportElement positionType="Float" x="366" y="52" width="190" height="14" uuid="6549800e-2b0b-49ef-bc5b-79cf10133ff0"/>
 				<textElement>
 					<font fontName="Gill Sans MT" size="12" isBold="false" pdfFontName="Helvetica"/>
 				</textElement>
@@ -143,44 +142,65 @@ WHERE
 				<text><![CDATA[CURSO:]]></text>
 			</staticText>
 			<textField>
-				<reportElement style="&lt;Different Values&gt;" x="684" y="46" width="100" height="20" uuid="b2a44e93-dc76-4f2b-8aa8-f4966c7fc575"/>
+				<reportElement x="684" y="46" width="100" height="20" uuid="b2a44e93-dc76-4f2b-8aa8-f4966c7fc575"/>
 				<textElement>
 					<font fontName="Gill Sans MT"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Course_name}]]></textFieldExpression>
 			</textField>
-		</band>
-	</columnHeader>
-	<detail>
-		<band height="97" splitType="Stretch">
 			<staticText>
-				<reportElement x="211" y="43" width="100" height="20" uuid="b57751ea-b94e-41a3-83f1-f3034d31b4b0"/>
+				<reportElement style="Column header" positionType="Float" x="0" y="85" width="222" height="33" forecolor="#000000" uuid="e533e024-8439-45e0-84be-0bd70c57a72f"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Gill Sans MT" size="16" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[NOTAS DEL CURSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="133" width="100" height="20" uuid="b57751ea-b94e-41a3-83f1-f3034d31b4b0"/>
 				<textElement>
 					<font fontName="Gill Sans MT" isBold="true"/>
 				</textElement>
 				<text><![CDATA[NOMBRE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="325" y="43" width="100" height="20" uuid="d534e9fc-9f6d-4edf-9de9-f91d9292d68c"/>
+				<reportElement x="325" y="133" width="100" height="20" uuid="d534e9fc-9f6d-4edf-9de9-f91d9292d68c"/>
 				<textElement>
 					<font fontName="Gill Sans MT" isBold="true"/>
 				</textElement>
 				<text><![CDATA[APELLIDO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="499" y="43" width="100" height="20" uuid="571a7240-c921-4b4b-91c9-2458c6592b25"/>
+				<reportElement x="475" y="133" width="100" height="20" uuid="571a7240-c921-4b4b-91c9-2458c6592b25"/>
 				<textElement>
 					<font fontName="Gill Sans MT" isBold="true"/>
 				</textElement>
 				<text><![CDATA[NOTA]]></text>
 			</staticText>
-			<staticText>
-				<reportElement style="Column header" positionType="Float" x="0" y="0" width="222" height="33" forecolor="#000000" uuid="e533e024-8439-45e0-84be-0bd70c57a72f"/>
-				<textElement textAlignment="Justified" verticalAlignment="Middle">
-					<font fontName="Gill Sans MT" size="16" isBold="true" pdfFontName="Helvetica"/>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="475" y="0" width="165" height="14" uuid="05f91e24-049a-4a1b-a228-f8c11cb37241"/>
+				<textElement>
+					<font fontName="Gill Sans MT" size="10" isBold="false" pdfFontName="Helvetica"/>
 				</textElement>
-				<text><![CDATA[NOTAS DEL CURSO]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{StudentResults_grade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="150" height="20" uuid="749a31d4-2d03-44da-99c6-d2930cf04421"/>
+				<textElement>
+					<font fontName="Gill Sans MT"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Student_primaryLastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="0" width="111" height="20" uuid="580373da-346c-4348-b96f-885264cdae49"/>
+				<textElement>
+					<font fontName="Gill Sans MT"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Student_firstName}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>
@@ -191,27 +211,6 @@ WHERE
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
 			</line>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="&lt;Different Values&gt;" positionType="Float" x="489" y="3" width="165" height="14" uuid="05f91e24-049a-4a1b-a228-f8c11cb37241"/>
-				<textElement>
-					<font fontName="Gill Sans MT" size="10" isBold="false" pdfFontName="Helvetica"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{StudentResults_grade}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="&lt;Different Values&gt;" x="211" y="3" width="111" height="20" uuid="580373da-346c-4348-b96f-885264cdae49"/>
-				<textElement>
-					<font fontName="Gill Sans MT"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{Student_firstName}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="&lt;Different Values&gt;" x="325" y="3" width="150" height="20" uuid="749a31d4-2d03-44da-99c6-d2930cf04421"/>
-				<textElement>
-					<font fontName="Gill Sans MT"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{Student_primaryLastName}]]></textFieldExpression>
-			</textField>
 		</band>
 	</columnFooter>
 	<pageFooter>
