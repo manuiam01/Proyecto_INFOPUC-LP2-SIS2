@@ -13,7 +13,7 @@ public class main {
     
     public static void main(String[] args) {
         // Prints "Hello, World" to the terminal window.
-        System.out.println("Hay que trabajar UwUr");
-        System.out.println("Okey dokey uwur");
+        //System.out.println("Hay que trabajar UwUr");
+        //System.out.println("Okey dokey uwur");
     }
 }

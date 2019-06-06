@@ -45,6 +45,7 @@ public class StudentHistoryReportForm extends javax.swing.JFrame {
 
         jLabel1.setText("ID Student:");
 
+        txtIdStudent.setText("72485998");
         txtIdStudent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIdStudentActionPerformed(evt);
@@ -99,13 +100,13 @@ public class StudentHistoryReportForm extends javax.swing.JFrame {
             DBManager dbManager = DBManager.getdbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(),
                     dbManager.getUser(), dbManager.getPassword());
-            System.out.println("antessssss");
+            //System.out.println("antessssss");
             JasperReport reporte = (JasperReport) JRLoader.loadObjectFromFile(".\\src\\pe\\edu\\pucp\\infosis\\reports\\StudentReport.jasper");
-            System.out.println("despuesssssssss");
+            //System.out.println("despuesssssssss");
             HashMap hm = new HashMap();
-            System.out.println("antes");
+            //System.out.println("antes");
             hm.put("ID_DNI",txtIdStudent.getText());
-            System.out.println("despues");
+            //System.out.println("despues");
             JasperPrint impresion = JasperFillManager.fillReport(reporte, hm, con);
             JasperViewer visor = new JasperViewer(impresion);
             visor.setVisible(true);
