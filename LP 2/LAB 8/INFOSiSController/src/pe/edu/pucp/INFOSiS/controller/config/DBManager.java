@@ -25,7 +25,7 @@ public class DBManager {
         xstream.addPermission(AnyTypePermission.ANY);
         FileReader reader;
         try{
-            reader = new FileReader("src/pe/edu/pucp/inf/lp2/config/config.xml");
+            reader = new FileReader("src/pe/edu/pucp/infosis/config/config.xml");
             ConnectionParameters connParam =
             (ConnectionParameters) xstream.fromXML(reader);
             url = connParam.getUrl();
