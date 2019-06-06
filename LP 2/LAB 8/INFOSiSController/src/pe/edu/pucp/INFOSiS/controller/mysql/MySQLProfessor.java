@@ -83,7 +83,7 @@ public class MySQLProfessor implements DAOProfessor {
         try{
             DBManager dbManager = DBManager.getdbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call LIST_PROFESSORS(?,?,?,?,?,?,?,?,?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call LIST_PROFESSORS()}");
             ResultSet rs = cs.executeQuery();
             while(rs.next()){
                 Professor p = new Professor();
@@ -115,7 +115,7 @@ public class MySQLProfessor implements DAOProfessor {
         try{
             DBManager dbManager = DBManager.getdbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call LIST_ACTIVE_PROFESSORS(?,?,?,?,?,?,?,?,?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call LIST_ACTIVE_PROFESSORS()}");
             ResultSet rs = cs.executeQuery();
             while(rs.next()){
                 Professor p = new Professor();
