@@ -62,7 +62,7 @@ public class MySQLInterested {
         try{
             DBManager dbManager = DBManager.getdbManager();
             Connection con = DriverManager.getConnection(dbManager.getUrl(), dbManager.getUser(), dbManager.getPassword());
-            CallableStatement cs = con.prepareCall("{call UPDATE_INTERESTED(?,?,?,?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call UPDATE_INTERESTED(?,?,?,?,?,?,?,?)}");
             cs.setString(1,interested.getFirstName());
             cs.setString(2,interested.getPrimaryLastName());
             cs.setString(3,interested.getMiddleName());
@@ -70,6 +70,7 @@ public class MySQLInterested {
             cs.setString(5,interested.getGender());
             cs.setString(6,interested.getEmail());
             cs.setString(7,interested.getCellPhoneNumber());
+            cs.setString(8,interested.getIdNumber());
             result = cs.executeUpdate();
             ArrayList<CourseType> courses = new ArrayList<CourseType>();
             courses = interested.getCourseTypes();
