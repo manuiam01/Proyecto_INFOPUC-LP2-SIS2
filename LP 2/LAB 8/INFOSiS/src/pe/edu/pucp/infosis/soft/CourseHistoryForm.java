@@ -100,7 +100,7 @@ public class CourseHistoryForm extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection(dbManager.getUrl(),
                 dbManager.getUser(), dbManager.getPassword());
 
-            JasperReport reporte = (JasperReport) JRLoader.loadObjectFromFile(".\\src\\pe\\edu\\pucp\\infosis\\reports\\rptCourseHistory.jasper");
+            JasperReport reporte = (JasperReport) JRLoader.loadObjectFromFile(".\\src\\pe\\edu\\pucp\\infosis\\reports\\CourseHistoryReport.jasper");
 
             HashMap hm = new HashMap();
 

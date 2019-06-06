@@ -234,11 +234,11 @@ WHERE
 	<summary>
 		<band height="42" splitType="Stretch">
 			<textField>
-				<reportElement x="84" y="9" width="143" height="33" uuid="bdf69c0c-00f0-429a-bbf1-612d4ccf6a77"/>
+				<reportElement x="84" y="9" width="394" height="33" uuid="bdf69c0c-00f0-429a-bbf1-612d4ccf6a77"/>
 				<textElement verticalAlignment="Middle">
 					<font size="14" isItalic="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$V{totaL}*1.0/$V{PAGE_COUNT}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[String.format("%.2f",$V{totaL}*1.0/$V{PAGE_COUNT})]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement style="Column header" positionType="Float" x="0" y="9" width="84" height="33" forecolor="#000000" uuid="6afdfe87-28ad-4242-b464-5a21bac04a9a"/>
