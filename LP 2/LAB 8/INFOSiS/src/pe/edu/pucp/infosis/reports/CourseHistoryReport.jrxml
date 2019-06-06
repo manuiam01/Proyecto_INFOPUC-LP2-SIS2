@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="715fcbcb-686e-4dce-92b2-958130a67627">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="3"/>
+	<property name="ireport.y" value="0"/>
 	<style name="Title"/>
 	<style name="SubTitle"/>
 	<style name="Column header"/>
@@ -156,21 +156,21 @@ WHERE
 				<reportElement x="0" y="122" width="555" height="20" forecolor="#FFFFFF" backcolor="#060668" uuid="98bf8062-e767-49e5-ba6d-484c916b0d66"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="52" y="122" width="100" height="20" forecolor="#FFFFFF" uuid="f39e0791-cf87-4193-a0ca-553f9c4ff06e"/>
+				<reportElement x="114" y="122" width="100" height="20" forecolor="#FFFFFF" uuid="f39e0791-cf87-4193-a0ca-553f9c4ff06e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Gill Sans MT"/>
 				</textElement>
 				<text><![CDATA[NOMBRE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="206" y="122" width="100" height="20" forecolor="#FFFFFF" uuid="4d6892c5-cb90-4efe-94a7-51d13654158e"/>
+				<reportElement x="200" y="122" width="100" height="20" forecolor="#FFFFFF" uuid="4d6892c5-cb90-4efe-94a7-51d13654158e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Gill Sans MT"/>
 				</textElement>
 				<text><![CDATA[APELLIDO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="354" y="122" width="100" height="20" forecolor="#FFFFFF" uuid="edfbbbfe-debb-4761-8078-0ae2c0e71446"/>
+				<reportElement x="300" y="122" width="100" height="20" forecolor="#FFFFFF" uuid="edfbbbfe-debb-4761-8078-0ae2c0e71446"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Gill Sans MT"/>
 				</textElement>
@@ -181,25 +181,25 @@ WHERE
 	<detail>
 		<band height="21" splitType="Stretch">
 			<textField>
-				<reportElement x="206" y="0" width="150" height="20" uuid="cf08e42d-493b-459e-953b-9c30f5719e30"/>
+				<reportElement x="226" y="0" width="150" height="20" uuid="cf08e42d-493b-459e-953b-9c30f5719e30"/>
 				<textElement>
 					<font fontName="Gill Sans MT"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Student_primaryLastName}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="52" y="0" width="111" height="20" uuid="8f72d587-00d1-481e-be2d-c82178cc0357"/>
-				<textElement>
-					<font fontName="Gill Sans MT"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{Student_firstName}]]></textFieldExpression>
-			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement positionType="Float" x="372" y="0" width="165" height="14" uuid="d732c9f9-cb69-4d46-b059-764a6cfb082f"/>
+				<reportElement positionType="Float" x="333" y="6" width="165" height="14" uuid="d732c9f9-cb69-4d46-b059-764a6cfb082f"/>
 				<textElement>
 					<font fontName="Gill Sans MT" size="10" isBold="false" pdfFontName="Helvetica"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{StudentResults_grade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="1" width="111" height="20" uuid="8f72d587-00d1-481e-be2d-c82178cc0357"/>
+				<textElement>
+					<font fontName="Gill Sans MT"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Student_firstName}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
