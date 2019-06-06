@@ -60,11 +60,11 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="ID Course:"/>
       </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="ID Course:"/>
-      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtIdCourse">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="100"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIdCourseActionPerformed"/>
       </Events>

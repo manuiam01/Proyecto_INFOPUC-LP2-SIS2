@@ -46,6 +46,7 @@ public class CourseReportForm extends javax.swing.JFrame {
 
         jLabel1.setText("ID Course:");
 
+        txtIdCourse.setText("100");
         txtIdCourse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIdCourseActionPerformed(evt);
@@ -86,8 +87,6 @@ public class CourseReportForm extends javax.swing.JFrame {
                 .addComponent(btnCourseHistory)
                 .addContainerGap(45, Short.MAX_VALUE))
         );
-
-        jLabel1.getAccessibleContext().setAccessibleName("ID Course:");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
