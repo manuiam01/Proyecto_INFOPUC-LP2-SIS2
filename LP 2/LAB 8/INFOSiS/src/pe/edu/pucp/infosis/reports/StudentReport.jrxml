@@ -5,6 +5,7 @@
 	<property name="ireport.y" value="0"/>
 	<style name="Title"/>
 	<style name="SubTitle"/>
+	<style name="Column header"/>
 	<parameter name="ID_DNI" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT S.firstName,S.middleName, S.primaryLastName, S.secondLastName, S.idStudent,C.name, SR.grade, SR.state FROM Student S
@@ -84,17 +85,23 @@ WHERE S.idStudent = $P{ID_DNI}]]>
 			</staticText>
 			<staticText>
 				<reportElement x="102" y="69" width="100" height="20" forecolor="#FFFFFF" uuid="1d3351e0-fe73-450e-87ed-b45ba974343f"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Gill Sans MT" isBold="false"/>
+				</textElement>
 				<text><![CDATA[CURSO]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="202" y="69" width="100" height="20" forecolor="#FFFFFF" uuid="ce9c840e-bf85-423f-b2a3-4af5ae1a9b2f"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Gill Sans MT" isBold="false"/>
+				</textElement>
 				<text><![CDATA[NOTA FINAL]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="302" y="69" width="100" height="20" forecolor="#FFFFFF" uuid="9960427b-8703-41e0-b91f-c1c4d6d4674c"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Gill Sans MT" isBold="false"/>
+				</textElement>
 				<text><![CDATA[RESULTADO]]></text>
 			</staticText>
 			<textField>
@@ -141,7 +148,29 @@ WHERE S.idStudent = $P{ID_DNI}]]>
 		<band height="45" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="54" splitType="Stretch"/>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" positionType="Float" mode="Opaque" x="10" y="10" width="111" height="34" forecolor="#FFFFFF" backcolor="#060668" uuid="25e42389-a284-41b3-ac36-a92743e13d1f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Gill Sans MT" size="20" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[INFOSiS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="530" y="24" width="19" height="20" uuid="3b04954e-9893-4365-bf07-4d4dddae68da"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="488" y="24" width="42" height="20" uuid="35e6c209-2d41-4d9b-bc14-2f5723de33e3"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Página ]]></text>
+			</staticText>
+		</band>
 	</pageFooter>
 	<summary>
 		<band height="42" splitType="Stretch"/>
