@@ -94,6 +94,7 @@ FROM Interested]]>
 	</field>
 	<variable name="cantInteresados" class="java.lang.Integer" calculation="Count">
 		<variableExpression><![CDATA[$F{idNumber}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
 	</variable>
 	<title>
 		<band height="127" splitType="Stretch">
@@ -105,7 +106,7 @@ FROM Interested]]>
 				<text><![CDATA[Reporte de Interesados]]></text>
 			</staticText>
 			<frame>
-				<reportElement mode="Opaque" x="0" y="0" width="555" height="65" forecolor="#006699" backcolor="#006699" uuid="ea18920e-ab09-49f6-82ef-e00924f55377"/>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="65" forecolor="#006699" backcolor="#060668" uuid="ea18920e-ab09-49f6-82ef-e00924f55377"/>
 				<staticText>
 					<reportElement style="Title" x="231" y="0" width="324" height="65" uuid="48b63714-e293-423b-81b8-bddf2c3832c0"/>
 					<textElement textAlignment="Right">
@@ -114,26 +115,12 @@ FROM Interested]]>
 					<text><![CDATA[INFOPUC]]></text>
 				</staticText>
 			</frame>
-			<staticText>
-				<reportElement style="Detail" positionType="Float" x="134" y="254" width="67" height="20" forecolor="#000000" uuid="643eefb5-8b68-428d-aefd-2153b03133c8"/>
-				<textElement>
-					<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
-				</textElement>
-				<text><![CDATA[Nombres]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Detail" positionType="Float" x="231" y="256" width="54" height="18" uuid="0e940cc0-e678-462f-b121-fd024f3f34a0"/>
-				<textElement>
-					<font fontName="Arial" size="11" isBold="false" pdfFontName="Helvetica"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
-			</textField>
 			<textField>
-				<reportElement x="181" y="74" width="100" height="20" uuid="3380f6f1-bd9b-41c4-9f96-87db541acd65"/>
+				<reportElement x="160" y="96" width="100" height="20" uuid="3380f6f1-bd9b-41c4-9f96-87db541acd65"/>
 				<textFieldExpression><![CDATA[$V{cantInteresados}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement style="Column header" positionType="Float" x="4" y="74" width="156" height="20" forecolor="#000000" uuid="b68b1ddd-92ad-4190-ad46-baac7cfbd1ce"/>
+				<reportElement style="Column header" positionType="Float" x="0" y="94" width="156" height="20" forecolor="#000000" uuid="b68b1ddd-92ad-4190-ad46-baac7cfbd1ce"/>
 				<textElement>
 					<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
 				</textElement>
@@ -145,33 +132,36 @@ FROM Interested]]>
 		<band splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="67" splitType="Stretch">
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="0" width="553" height="20" forecolor="#FFFFFF" backcolor="#060668" uuid="8dcf1650-e3c4-414e-a697-f129ebe9ad00"/>
+			</rectangle>
 			<frame>
-				<reportElement x="227" y="0" width="328" height="20" uuid="0641ea8e-357b-42cd-b6c4-4ac14225c18b"/>
+				<reportElement x="228" y="0" width="328" height="20" uuid="0641ea8e-357b-42cd-b6c4-4ac14225c18b"/>
 				<staticText>
-					<reportElement style="Column header" positionType="Float" x="33" y="0" width="76" height="20" forecolor="#000000" uuid="d0a6dfde-e84a-4b4a-a485-7a6e9e686227"/>
+					<reportElement style="Column header" positionType="Float" x="33" y="0" width="76" height="20" forecolor="#FFFFFF" uuid="d0a6dfde-e84a-4b4a-a485-7a6e9e686227"/>
 					<textElement>
 						<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
 					</textElement>
 					<text><![CDATA[Apellidos]]></text>
 				</staticText>
 				<staticText>
-					<reportElement style="Column header" positionType="Float" x="206" y="0" width="54" height="20" forecolor="#000000" uuid="ae370045-5298-4358-86b0-13bfbd799f71"/>
+					<reportElement style="Column header" positionType="Float" x="206" y="0" width="54" height="20" forecolor="#FFFFFF" uuid="ae370045-5298-4358-86b0-13bfbd799f71"/>
 					<textElement>
 						<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
 					</textElement>
-					<text><![CDATA[email]]></text>
+					<text><![CDATA[Email]]></text>
 				</staticText>
 			</frame>
 			<staticText>
-				<reportElement style="Column header" positionType="Float" x="4" y="0" width="54" height="20" forecolor="#000000" uuid="9b4d9b01-2d80-4d45-aad8-b7cc35c35601"/>
+				<reportElement style="Column header" positionType="Float" x="4" y="0" width="54" height="20" forecolor="#FFFFFF" uuid="9b4d9b01-2d80-4d45-aad8-b7cc35c35601"/>
 				<textElement>
 					<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
 				</textElement>
 				<text><![CDATA[DNI]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" positionType="Float" x="93" y="0" width="67" height="20" forecolor="#000000" uuid="9a59c5f6-abff-4e81-ad28-f69a2ebd6649"/>
+				<reportElement style="Column header" positionType="Float" x="93" y="0" width="67" height="20" forecolor="#FFFFFF" uuid="9a59c5f6-abff-4e81-ad28-f69a2ebd6649"/>
 				<textElement>
 					<font fontName="Arial" isBold="false" pdfFontName="Helvetica"/>
 				</textElement>
@@ -180,7 +170,7 @@ FROM Interested]]>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="65" splitType="Stretch">
+		<band height="22" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Detail" positionType="Float" x="4" y="2" width="73" height="18" uuid="e1bbbf5c-9bc9-403f-ac76-03cd34f41b4a"/>
 				<textElement>
@@ -226,34 +216,31 @@ FROM Interested]]>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="59" splitType="Stretch"/>
+		<band height="43" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
 		<band height="58" splitType="Stretch">
-			<frame>
-				<reportElement mode="Opaque" x="0" y="29" width="555" height="13" forecolor="#D0B48E" backcolor="#006699" uuid="697a8753-bd40-4243-9834-9e9886dcc995"/>
-				<textField evaluationTime="Report">
-					<reportElement style="Column header" x="503" y="0" width="40" height="13" forecolor="#FFFFFF" uuid="9c4dbfb7-481f-448f-9321-20ee65a13624"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
-				</textField>
-				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement style="Column header" x="2" y="0" width="197" height="13" forecolor="#FFFFFF" uuid="f3999b51-5227-46fb-93ab-96201ad910a5"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement style="Column header" x="407" y="0" width="80" height="13" forecolor="#FFFFFF" uuid="443e01f3-9b1c-473e-838b-a85b55f1fe54"/>
-					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
-				</textField>
-			</frame>
+			<staticText>
+				<reportElement x="488" y="24" width="42" height="20" uuid="2df1a4af-891a-4ff1-8dcb-de1352fcde36"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Página ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" mode="Opaque" x="10" y="10" width="111" height="34" forecolor="#FFFFFF" backcolor="#060668" uuid="3a79d668-4c83-4e49-84fb-853d77723be0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Gill Sans MT" size="20" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[INFOSiS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="530" y="24" width="19" height="20" uuid="703ea0bb-31f1-4de1-a88d-677ebb2a1ad2"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
 		</band>
 	</pageFooter>
 	<summary>
